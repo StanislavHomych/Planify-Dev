@@ -1,0 +1,62 @@
+# EstimateCalc Project Rules
+
+## Project Overview
+EstimateCalc is a professional web calculator for estimating development costs and timelines for web and mobile projects. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## Technology Stack
+- Next.js 14 (App Router)
+- TypeScript (strict mode)
+- Tailwind CSS for styling
+- Zustand for state management
+- jsPDF for PDF export
+- React Icons
+
+## Code Style
+- Use functional components with hooks
+- Prefer TypeScript interfaces over types for object shapes
+- Use meaningful variable and function names in English or Ukrainian
+- Keep components focused and single-responsibility
+- Use Tailwind utility classes, avoid inline styles
+
+## File Structure
+- `/app` - Next.js pages and layouts
+- `/components` - Reusable React components
+- `/store` - Zustand state management
+- `/types` - TypeScript type definitions
+- `/data` - Static data and constants
+- `/utils` - Utility functions
+
+## State Management
+- Use Zustand for global state
+- Persist calculator state in localStorage
+- Calculate costs dynamically based on user input
+
+## Components
+- Step components for each calculator stage
+- Each step should be self-contained
+- Use the calculator store for state updates
+
+## Styling
+- Use Tailwind CSS utility classes
+- Custom styles in globals.css
+- Responsive design (mobile-first)
+- Consistent color scheme (primary-600 for main actions)
+
+## Features to Maintain
+1. Team configuration with roles and rates
+2. Design complexity estimation
+3. Feature selection with time estimates
+4. Tech stack selection with multipliers
+5. Testing and QA configuration
+6. Additional costs (support, documentation, buffer)
+7. Detailed cost breakdown
+8. PDF export functionality
+9. Save/load estimates
+
+## Best Practices
+- Validate user input
+- Provide helpful error messages
+- Keep calculations transparent
+- Allow customization of estimates
+- Make UI intuitive and user-friendly
+
