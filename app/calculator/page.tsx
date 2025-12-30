@@ -83,22 +83,23 @@ export default function CalculatorPage() {
     <div className="min-h-screen bg-jira-background">
       {/* Header */}
       <header className="bg-white border-b border-jira-border sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2 text-jira-textSecondary hover:text-jira-blue transition-colors">
-              <FiHome className="text-base" />
-              <span className="text-sm">Home</span>
+        <div className="container mx-auto px-3 sm:px-4 py-2">
+          <div className="flex items-center justify-between gap-2">
+            <Link href="/" className="flex items-center space-x-1.5 sm:space-x-2 text-jira-textSecondary hover:text-jira-blue transition-colors text-xs sm:text-sm">
+              <FiHome className="text-sm sm:text-base" />
+              <span className="hidden xs:inline">Home</span>
             </Link>
             
-            <h1 className="text-sm font-semibold text-jira-darkBlue hidden md:block">
-              Development Cost Calculator
+            <h1 className="text-xs sm:text-sm font-semibold text-jira-darkBlue text-center flex-1 px-2">
+              <span className="hidden sm:inline">Development Cost Calculator</span>
+              <span className="sm:hidden">Calculator</span>
             </h1>
 
             <button
               onClick={() => setShowResetConfirm(true)}
-              className="flex items-center space-x-1.5 text-jira-textSecondary hover:text-jira-error transition-colors text-sm"
+              className="flex items-center space-x-1 text-jira-textSecondary hover:text-jira-error transition-colors text-xs sm:text-sm"
             >
-              <FiRefreshCw className="text-base" />
+              <FiRefreshCw className="text-sm sm:text-base" />
               <span className="hidden sm:inline">Reset</span>
             </button>
           </div>
@@ -107,14 +108,14 @@ export default function CalculatorPage() {
 
       {/* Steps Navigation */}
       {!showProjectTypeSelector && (
-      <div className="bg-white border-b border-jira-border">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-1">
+      <div className="bg-white border-b border-jira-border overflow-x-auto">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="flex items-center gap-0.5 sm:gap-1 min-w-max">
             {STEPS.map((step, index) => (
               <button
                 key={step.id}
                 onClick={() => setCurrentStep(index)}
-                className={`flex items-center gap-2 px-3 py-3 text-sm font-medium transition-all border-b-2 ${
+                className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 sm:py-3 text-xs sm:text-sm font-medium transition-all border-b-2 whitespace-nowrap ${
                   index === currentStep
                     ? 'text-jira-blue border-jira-blue'
                     : index < currentStep
@@ -123,9 +124,9 @@ export default function CalculatorPage() {
                 }`}
               >
                 {index < currentStep ? (
-                  <Fi.FiCheckCircle className="text-jira-success" />
+                  <Fi.FiCheckCircle className="text-jira-success text-sm sm:text-base" />
                 ) : (
-                  <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${
+                  <span className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center text-xs ${
                     index === currentStep 
                       ? 'bg-jira-blue text-white' 
                       : 'bg-gray-200 text-gray-500'
@@ -133,7 +134,7 @@ export default function CalculatorPage() {
                     {index + 1}
                   </span>
                 )}
-                <span className="hidden md:inline">{step.title}</span>
+                <span className="hidden sm:inline">{step.title}</span>
               </button>
             ))}
           </div>
@@ -142,14 +143,14 @@ export default function CalculatorPage() {
       )}
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-4">
+      <main className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         {!showProjectTypeSelector && currentStep === 0 && team.length === 0 && (
-          <div className="card bg-primary-50 border border-jira-blue mb-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Fi.FiZap className="text-lg text-jira-blue flex-shrink-0" />
+          <div className="card bg-primary-50 border border-jira-blue mb-3 sm:mb-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div className="flex items-center space-x-2 flex-1">
+                <Fi.FiZap className="text-base sm:text-lg text-jira-blue flex-shrink-0" />
                 <div>
-                  <h3 className="font-medium text-sm text-jira-darkBlue">Quick Start with Templates</h3>
+                  <h3 className="font-medium text-xs sm:text-sm text-jira-darkBlue">Quick Start with Templates</h3>
                   <p className="text-xs text-jira-textSecondary">
                     Use a pre-configured template for your project type
                   </p>
@@ -157,7 +158,7 @@ export default function CalculatorPage() {
               </div>
               <button
                 onClick={handleOpenProjectType}
-                className="btn-primary whitespace-nowrap ml-4 text-sm"
+                className="btn-primary whitespace-nowrap w-full sm:w-auto text-xs sm:text-sm"
               >
                 Browse Templates
               </button>
@@ -176,21 +177,21 @@ export default function CalculatorPage() {
         {/* Navigation Buttons */}
         {!showProjectTypeSelector && (
           <>
-            <div className="flex items-center justify-between mt-4 max-w-5xl mx-auto gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between mt-4 max-w-5xl mx-auto gap-2 sm:gap-3">
               <button
                 onClick={handlePrev}
                 disabled={currentStep === 0}
-                className="btn-secondary flex items-center space-x-2 disabled:opacity-40 disabled:cursor-not-allowed"
+                className="btn-secondary flex items-center justify-center space-x-2 disabled:opacity-40 disabled:cursor-not-allowed text-sm sm:text-base order-2 sm:order-1"
               >
-                <FiArrowLeft className="text-lg" />
+                <FiArrowLeft className="text-base sm:text-lg" />
                 <span>Back</span>
               </button>
 
               <button
                 onClick={handleOpenProjectType}
-                className="btn-secondary text-sm flex items-center space-x-2"
+                className="btn-secondary text-xs sm:text-sm flex items-center justify-center space-x-2 order-3 sm:order-2 hidden sm:flex"
               >
-                <FiArrowRight className="text-base" />
+                <FiArrowRight className="text-sm sm:text-base" />
                 <span>Use Template</span>
               </button>
 
@@ -198,15 +199,15 @@ export default function CalculatorPage() {
                 <button
                   onClick={handleNext}
                   disabled={!canProceed()}
-                  className="btn-primary flex items-center space-x-2"
+                  className="btn-primary flex items-center justify-center space-x-2 text-sm sm:text-base order-1 sm:order-3"
                 >
                   <span>Next</span>
-                  <FiArrowRight className="text-lg" />
+                  <FiArrowRight className="text-base sm:text-lg" />
                 </button>
               ) : (
-                <Link href="/" className="btn-primary flex items-center space-x-2">
+                <Link href="/" className="btn-primary flex items-center justify-center space-x-2 text-sm sm:text-base order-1 sm:order-3">
                   <span>Finish</span>
-                  <FiArrowRight className="text-lg" />
+                  <FiArrowRight className="text-base sm:text-lg" />
                 </Link>
               )}
             </div>
@@ -224,7 +225,7 @@ export default function CalculatorPage() {
       {/* Reset Confirmation Modal */}
       {showResetConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded shadow-jira-lg max-w-md w-full p-6">
+          <div className="bg-white rounded shadow-jira-lg max-w-md w-full p-4 sm:p-6">
             <h3 className="text-lg font-semibold mb-3 text-jira-darkBlue">Reset Calculation?</h3>
             <p className="text-jira-textSecondary mb-6 text-sm">
               All entered data will be lost. This action is irreversible.
@@ -246,6 +247,89 @@ export default function CalculatorPage() {
           </div>
         </div>
       )}
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-jira-border mt-12 sm:mt-20">
+        <div className="container mx-auto px-4 py-8 sm:py-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            {/* Brand Section */}
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-jira-blue rounded flex items-center justify-center">
+                  <FiIcons.FiGrid className="text-xl sm:text-2xl text-white" />
+                </div>
+                <span className="text-xl sm:text-2xl font-bold text-jira-darkBlue">Projekto</span>
+              </div>
+              <p className="text-xs sm:text-sm text-jira-textSecondary">
+                {/* Description will be added later */}
+              </p>
+            </div>
+
+            {/* Navigation Columns */}
+            <div>
+              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">PRODUCT</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/calculator" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Calculator
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">LEGAL</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/blog/privacy-policy" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/terms-of-service" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">RESOURCES</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/blog" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Separator */}
+          <div className="border-t border-jira-border my-8"></div>
+
+          {/* Bottom Section */}
+          <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-jira-textSecondary gap-3 sm:gap-0">
+            <div>
+              <p>© 2025 Projekto. All rights reserved.</p>
+            </div>
+            <div className="flex space-x-3 sm:space-x-4">
+              <Link href="/blog/privacy-policy" className="hover:text-jira-blue transition-colors">
+                Privacy
+              </Link>
+              <span className="text-jira-border">•</span>
+              <Link href="/blog/terms-of-service" className="hover:text-jira-blue transition-colors">
+                Terms
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

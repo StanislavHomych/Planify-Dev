@@ -69,16 +69,16 @@ export default function Step3Features() {
               {/* Category Header */}
               <button
                 onClick={() => toggleCategory(category)}
-                className="w-full flex items-center justify-between text-left"
+                className="w-full flex items-center justify-between text-left gap-2"
               >
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
                   {isExpanded ? (
-                    <FiChevronDown className="text-lg text-jira-textSecondary" />
+                    <FiChevronDown className="text-base sm:text-lg text-jira-textSecondary flex-shrink-0" />
                   ) : (
-                    <FiChevronRight className="text-lg text-jira-textSecondary" />
+                    <FiChevronRight className="text-base sm:text-lg text-jira-textSecondary flex-shrink-0" />
                   )}
-                  <div>
-                    <h3 className="font-semibold text-jira-darkBlue">{category}</h3>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-sm sm:text-base text-jira-darkBlue truncate">{category}</h3>
                     {selectedInCategory > 0 && (
                       <span className="text-xs text-jira-blue font-medium">
                         {selectedInCategory} selected
@@ -87,7 +87,7 @@ export default function Step3Features() {
                   </div>
                 </div>
                 {selectedInCategory > 0 && (
-                  <div className="w-6 h-6 bg-jira-blue text-white rounded-full flex items-center justify-center text-xs font-bold">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-jira-blue text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
                     {selectedInCategory}
                   </div>
                 )}
@@ -95,36 +95,36 @@ export default function Step3Features() {
 
               {/* Category Features */}
               {isExpanded && (
-                <div className="mt-3 space-y-2 pl-7">
+                <div className="mt-3 space-y-2 pl-4 sm:pl-7">
                   {categoryFeatures.map((feature) => (
                     <div
                       key={feature.id}
-                      className={`p-3 rounded border transition-all ${
+                      className={`p-2 sm:p-3 rounded border transition-all ${
                         feature.selected
                           ? 'border-jira-blue bg-primary-50 shadow-jira'
                           : 'border-jira-border hover:border-jira-blue hover:shadow-jira'
                       }`}
                     >
-                      <label className="flex items-start space-x-3 cursor-pointer">
+                      <label className="flex items-start space-x-2 sm:space-x-3 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={feature.selected}
                           onChange={() => toggleFeature(feature.id)}
-                          className="checkbox-field mt-0.5"
+                          className="checkbox-field mt-0.5 flex-shrink-0"
                         />
-                        <div className="flex-1">
-                          <div className="font-medium text-sm text-jira-darkBlue mb-2">{feature.name}</div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-xs sm:text-sm text-jira-darkBlue mb-2 break-words">{feature.name}</div>
                           
-                          <div className="grid grid-cols-2 gap-2 text-xs">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                             <div className="flex items-center space-x-1.5">
-                              <FiCode className="text-jira-textSecondary" />
+                              <FiCode className="text-jira-textSecondary flex-shrink-0" />
                               <span className="text-jira-textSecondary">Frontend: </span>
                               <span className="font-medium text-jira-darkBlue">
                                 {feature.frontendHours.min}-{feature.frontendHours.max} hrs
                               </span>
                             </div>
                             <div className="flex items-center space-x-1.5">
-                              <FiCode className="text-jira-textSecondary" />
+                              <FiCode className="text-jira-textSecondary flex-shrink-0" />
                               <span className="text-jira-textSecondary">Backend: </span>
                               <span className="font-medium text-jira-darkBlue">
                                 {feature.backendHours.min}-{feature.backendHours.max} hrs
@@ -139,35 +139,41 @@ export default function Step3Features() {
                                 <FiClock className="text-xs" />
                                 <span>Customize hours (optional):</span>
                               </div>
-                              <div className="grid grid-cols-2 gap-2">
-                                <input
-                                  type="number"
-                                  placeholder={`${feature.frontendHours.min}-${feature.frontendHours.max}`}
-                                  value={feature.customHours?.frontend || ''}
-                                  onChange={(e) =>
-                                    updateFeatureHours(
-                                      feature.id,
-                                      e.target.value ? Number(e.target.value) : undefined,
-                                      feature.customHours?.backend
-                                    )
-                                  }
-                                  className="input-field text-xs py-1.5"
-                                  min="0"
-                                />
-                                <input
-                                  type="number"
-                                  placeholder={`${feature.backendHours.min}-${feature.backendHours.max}`}
-                                  value={feature.customHours?.backend || ''}
-                                  onChange={(e) =>
-                                    updateFeatureHours(
-                                      feature.id,
-                                      feature.customHours?.frontend,
-                                      e.target.value ? Number(e.target.value) : undefined
-                                    )
-                                  }
-                                  className="input-field text-xs py-1.5"
-                                  min="0"
-                                />
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div>
+                                  <label className="text-xs text-jira-textSecondary mb-1 block">Frontend hours</label>
+                                  <input
+                                    type="number"
+                                    placeholder={`${feature.frontendHours.min}-${feature.frontendHours.max}`}
+                                    value={feature.customHours?.frontend || ''}
+                                    onChange={(e) =>
+                                      updateFeatureHours(
+                                        feature.id,
+                                        e.target.value ? Number(e.target.value) : undefined,
+                                        feature.customHours?.backend
+                                      )
+                                    }
+                                    className="input-field text-xs py-1.5"
+                                    min="0"
+                                  />
+                                </div>
+                                <div>
+                                  <label className="text-xs text-jira-textSecondary mb-1 block">Backend hours</label>
+                                  <input
+                                    type="number"
+                                    placeholder={`${feature.backendHours.min}-${feature.backendHours.max}`}
+                                    value={feature.customHours?.backend || ''}
+                                    onChange={(e) =>
+                                      updateFeatureHours(
+                                        feature.id,
+                                        feature.customHours?.frontend,
+                                        e.target.value ? Number(e.target.value) : undefined
+                                      )
+                                    }
+                                    className="input-field text-xs py-1.5"
+                                    min="0"
+                                  />
+                                </div>
                               </div>
                             </div>
                           )}

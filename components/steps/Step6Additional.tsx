@@ -34,7 +34,7 @@ export default function Step6Additional() {
       {/* Support */}
       <div className="card">
         <label className="label text-xs">Post-launch Support</label>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mt-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 mt-2">
           {supportOptions.map((option) => (
             <button
               key={option.value}

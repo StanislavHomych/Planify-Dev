@@ -11,6 +11,7 @@ const FiPlus = FiIcons.FiPlus;
 const FiTrash2 = FiIcons.FiTrash2;
 const FiUsers = FiIcons.FiUsers;
 const FiInfo = FiIcons.FiInfo;
+const FiEdit = FiIcons.FiEdit;
 
 export default function Step1Team() {
   const { team, projectName, setProjectName, addTeamMember, updateTeamMember, removeTeamMember } = useCalculatorStore();
@@ -63,23 +64,87 @@ export default function Step1Team() {
           <div key={member.id} className="card hover:shadow-jira-md transition-all duration-150">
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {/* Role */}
-                  <div>
-                    <label className="label text-xs">Role</label>
-                    <Select
-                      value={member.role}
-                      onChange={(value) => {
-                        const newRole = value as Role;
-                        const newRate = RECOMMENDED_RATES[newRole][member.level];
-                        updateTeamMember(member.id, { role: newRole, hourlyRate: newRate });
-                      }}
-                      options={Object.entries(ROLE_NAMES).map(([value, label]) => ({
-                        value,
-                        label,
-                      }))}
-                    />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {/* Custom Role Toggle */}
+                  <div className="md:col-span-2">
+                    <label className="label text-xs">Role Type</label>
+                    <div className="flex space-x-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (member.isCustomRole) {
+                            // Switch to standard role
+                            const newRole = 'frontend-developer' as Role;
+                            const newRate = RECOMMENDED_RATES[newRole][member.level];
+                            updateTeamMember(member.id, { 
+                              isCustomRole: false, 
+                              customRoleName: undefined,
+                              role: newRole,
+                              hourlyRate: newRate
+                            });
+                          }
+                        }}
+                        className={`flex-1 px-3 py-2 text-xs rounded border transition-all ${
+                          !member.isCustomRole
+                            ? 'bg-jira-blue text-white border-jira-blue'
+                            : 'bg-white text-jira-text border-jira-border hover:bg-primary-50'
+                        }`}
+                      >
+                        Standard Role
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!member.isCustomRole) {
+                            // Switch to custom role
+                            updateTeamMember(member.id, { 
+                              isCustomRole: true,
+                              customRoleName: member.customRoleName || 'Custom Role'
+                            });
+                          }
+                        }}
+                        className={`flex-1 px-3 py-2 text-xs rounded border transition-all ${
+                          member.isCustomRole
+                            ? 'bg-jira-blue text-white border-jira-blue'
+                            : 'bg-white text-jira-text border-jira-border hover:bg-primary-50'
+                        }`}
+                      >
+                        Custom Role
+                      </button>
+                    </div>
                   </div>
+
+                  {/* Role - Standard or Custom */}
+                  {!member.isCustomRole ? (
+                    <div>
+                      <label className="label text-xs">Role</label>
+                      <Select
+                        value={member.role}
+                        onChange={(value) => {
+                          const newRole = value as Role;
+                          const newRate = RECOMMENDED_RATES[newRole]?.[member.level] || member.hourlyRate;
+                          updateTeamMember(member.id, { role: newRole, hourlyRate: newRate });
+                        }}
+                        options={Object.entries(ROLE_NAMES).map(([value, label]) => ({
+                          value,
+                          label,
+                        }))}
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <label className="label text-xs">Custom Role Name</label>
+                      <input
+                        type="text"
+                        value={member.customRoleName || ''}
+                        onChange={(e) =>
+                          updateTeamMember(member.id, { customRoleName: e.target.value })
+                        }
+                        placeholder="e.g., Data Scientist, ML Engineer"
+                        className="input-field text-sm"
+                      />
+                    </div>
+                  )}
 
                   {/* Level */}
                   <div>
@@ -146,6 +211,12 @@ export default function Step1Team() {
                 {/* Rate Summary for Member */}
                 <div className="mt-2 p-2 bg-primary-50 rounded border border-jira-border">
                   <div className="font-medium text-jira-darkBlue text-xs">
+                    {member.isCustomRole ? (
+                      <span>{member.customRoleName || 'Custom Role'}</span>
+                    ) : (
+                      <span>{ROLE_NAMES[member.role] || member.role}</span>
+                    )}
+                    {' - '}
                     Rate: ${member.hourlyRate}/hr
                     {member.quantity > 1 && ` × ${member.quantity} people`}
                   </div>
@@ -171,18 +242,18 @@ export default function Step1Team() {
       {/* Add Member Button */}
       <button
         onClick={handleAddMember}
-        className="w-full py-2 border-2 border-dashed border-jira-border rounded text-jira-blue text-sm font-medium hover:bg-primary-50 hover:border-jira-blue transition-all flex items-center justify-center space-x-2"
+        className="w-full py-2.5 sm:py-2 border-2 border-dashed border-jira-border rounded text-jira-blue text-xs sm:text-sm font-medium hover:bg-primary-50 hover:border-jira-blue transition-all flex items-center justify-center space-x-2"
       >
-        <FiPlus className="text-base" />
+        <FiPlus className="text-sm sm:text-base" />
         <span>Add Team Member</span>
       </button>
 
       {/* Team Summary */}
       {team.length > 0 && (
         <div className="card bg-jira-blue text-white shadow-jira-md">
-          <div className="text-center">
+          <div className="text-center px-2">
             <div className="text-xs uppercase tracking-wide opacity-90 mb-1">Team Configured</div>
-            <div className="text-xl font-bold mb-1">{team.length} {team.length === 1 ? 'role' : 'roles'}</div>
+            <div className="text-lg sm:text-xl font-bold mb-1">{team.length} {team.length === 1 ? 'role' : 'roles'}</div>
             <div className="text-xs opacity-90">
               Cost and time will be calculated after selecting features
             </div>

@@ -97,6 +97,8 @@ export interface TeamMember {
   hourlyRate: number;
   hoursPerDay: number;
   quantity: number;
+  isCustomRole?: boolean;
+  customRoleName?: string;
 }
 
 // Design configuration
@@ -107,6 +109,12 @@ export interface DesignConfig {
   includeIcons: boolean;
   includeAnimations: boolean;
   include3D: boolean;
+  customHours?: {
+    logo?: number;
+    icons?: number;
+    animations?: number;
+    threeD?: number;
+  };
   responsive: {
     mobile: boolean;
     tablet: boolean;
@@ -172,11 +180,12 @@ export interface AdditionalCosts {
 
 // Role cost breakdown
 export interface RoleCostBreakdown {
-  role: Role;
+  role: Role | string; // Allow custom role names
   level: Level;
   hours: number;
   cost: number;
   quantity: number;
+  customRoleName?: string;
 }
 
 // Feature cost breakdown

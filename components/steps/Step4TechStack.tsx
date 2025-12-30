@@ -130,11 +130,11 @@ export default function Step4TechStack() {
 
       {/* Help Button */}
       <div className="card bg-primary-50 border border-jira-blue">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <FiInfo className="text-xl text-jira-blue flex-shrink-0" />
-            <div>
-              <h3 className="font-semibold text-jira-darkBlue mb-1 text-sm">Need Help Choosing?</h3>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div className="flex items-start sm:items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+            <FiInfo className="text-lg sm:text-xl text-jira-blue flex-shrink-0 mt-0.5 sm:mt-0" />
+            <div className="min-w-0 flex-1">
+              <h3 className="font-semibold text-jira-darkBlue mb-1 text-xs sm:text-sm">Need Help Choosing?</h3>
               <p className="text-xs text-jira-textSecondary">
                 Not sure which technologies to pick? We can recommend the best stack for your project.
               </p>
@@ -142,7 +142,7 @@ export default function Step4TechStack() {
           </div>
           <button
             onClick={() => setShowRecommendations(true)}
-            className="btn-primary ml-4 whitespace-nowrap"
+            className="btn-primary w-full sm:w-auto whitespace-nowrap text-xs sm:text-sm px-4 py-2"
           >
             View Recommendations
           </button>
@@ -151,19 +151,19 @@ export default function Step4TechStack() {
 
       {/* Compatibility Indicator */}
       {compatNote && (
-        <div className={`card flex items-center space-x-3 ${
+        <div className={`card flex items-start sm:items-center space-x-2 sm:space-x-3 ${
           compatNote.type === 'excellent' ? 'bg-green-50 border border-jira-success' :
           compatNote.type === 'good' ? 'bg-primary-50 border border-jira-blue' :
           'bg-yellow-50 border border-jira-warning'
         }`}>
           {compatNote.type === 'excellent' ? (
-            <FiCheckCircle className="text-xl text-jira-success flex-shrink-0" />
+            <FiCheckCircle className="text-lg sm:text-xl text-jira-success flex-shrink-0 mt-0.5 sm:mt-0" />
           ) : compatNote.type === 'good' ? (
-            <FiCheckCircle className="text-xl text-jira-blue flex-shrink-0" />
+            <FiCheckCircle className="text-lg sm:text-xl text-jira-blue flex-shrink-0 mt-0.5 sm:mt-0" />
           ) : (
-            <FiAlertCircle className="text-xl text-jira-warning flex-shrink-0" />
+            <FiAlertCircle className="text-lg sm:text-xl text-jira-warning flex-shrink-0 mt-0.5 sm:mt-0" />
           )}
-          <p className={`font-medium text-sm ${
+          <p className={`font-medium text-xs sm:text-sm ${
             compatNote.type === 'excellent' ? 'text-green-900' :
             compatNote.type === 'good' ? 'text-jira-darkBlue' :
             'text-yellow-900'
@@ -176,7 +176,7 @@ export default function Step4TechStack() {
       {/* Frontend Framework */}
       <div className="card">
         <label className="label text-xs">Frontend Framework</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {frontendOptions.map((option) => (
             <button
               key={option.value}
@@ -197,7 +197,7 @@ export default function Step4TechStack() {
       {/* Backend Stack */}
       <div className="card">
         <label className="label text-xs">Backend Stack</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {backendOptions.map((option) => (
             <button
               key={option.value}
@@ -218,7 +218,7 @@ export default function Step4TechStack() {
       {/* Database */}
       <div className="card">
         <label className="label text-xs">Database</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {databaseOptions.map((option) => (
             <button
               key={option.value}
@@ -239,7 +239,7 @@ export default function Step4TechStack() {
       {/* Mobile Platform */}
       <div className="card">
         <label className="label text-xs">Mobile Platform (Optional)</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {[
             { value: 'none' as MobilePlatform, label: 'No Mobile', note: 'Web only' },
             { value: 'react-native' as MobilePlatform, label: 'React Native', note: '+30% time' },
@@ -267,7 +267,7 @@ export default function Step4TechStack() {
       {/* UI Library */}
       <div className="card">
         <label className="label text-xs">UI Library/Framework</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {[
             { value: 'tailwind' as UILibrary, label: 'Tailwind CSS', note: '-5% time' },
             { value: 'bootstrap' as UILibrary, label: 'Bootstrap', note: '-10% time' },
@@ -297,7 +297,7 @@ export default function Step4TechStack() {
       {/* Hosting Platform */}
       <div className="card">
         <label className="label text-xs">Hosting Platform</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {[
             { value: 'vercel' as HostingPlatform, label: 'Vercel', note: '+2% cost' },
             { value: 'netlify' as HostingPlatform, label: 'Netlify', note: '+2% cost' },
@@ -397,23 +397,23 @@ export default function Step4TechStack() {
 
       {/* Recommendations Modal */}
       {showRecommendations && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto">
-          <div className="bg-white rounded shadow-jira-lg max-w-4xl w-full p-6 my-8 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-semibold text-jira-darkBlue">Recommended Technology Stacks</h3>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4 overflow-y-auto">
+          <div className="bg-white rounded shadow-jira-lg max-w-4xl w-full p-4 sm:p-6 my-4 sm:my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between mb-3 sm:mb-4 gap-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-jira-darkBlue">Recommended Technology Stacks</h3>
               <button
                 onClick={() => setShowRecommendations(false)}
-                className="text-jira-textSecondary hover:text-jira-error transition-colors"
+                className="text-jira-textSecondary hover:text-jira-error transition-colors flex-shrink-0"
               >
-                <FiX className="text-2xl" />
+                <FiX className="text-xl sm:text-2xl" />
               </button>
             </div>
             
-            <p className="text-jira-textSecondary text-sm mb-6">
+            <p className="text-jira-textSecondary text-xs sm:text-sm mb-4 sm:mb-6">
               Choose a proven combination that works well together
             </p>
 
-            <div className="grid md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {RECOMMENDED_STACKS.map((stack) => (
                 <div
                   key={stack.id}
@@ -422,7 +422,7 @@ export default function Step4TechStack() {
                   <h4 className="font-semibold text-jira-darkBlue mb-2">{stack.name}</h4>
                   <p className="text-xs text-jira-textSecondary mb-3">{stack.description}</p>
                   
-                  <div className="text-xs mb-3 text-jira-textSecondary">
+                  <div className="text-xs mb-3 text-jira-textSecondary break-words">
                     <strong className="text-jira-darkBlue">Best for:</strong> {stack.bestFor.join(', ')}
                   </div>
 
@@ -462,12 +462,12 @@ export default function Step4TechStack() {
               ))}
             </div>
 
-            <div className="mt-6 p-4 bg-primary-50 rounded border border-jira-blue">
-              <div className="flex items-start space-x-2">
-                <FiInfo className="text-lg text-jira-blue flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-semibold text-jira-darkBlue mb-1 text-sm">Still not sure?</h4>
-                  <p className="text-xs text-jira-textSecondary">
+            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-primary-50 rounded border border-jira-blue">
+              <div className="flex items-start space-x-2 sm:space-x-3">
+                <FiInfo className="text-base sm:text-lg text-jira-blue flex-shrink-0 mt-0.5" />
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-semibold text-jira-darkBlue mb-1 text-xs sm:text-sm">Still not sure?</h4>
+                  <p className="text-xs text-jira-textSecondary break-words">
                     The <strong>Modern JavaScript Stack</strong> (React + Node.js + PostgreSQL) is the most popular choice 
                     and works great for 80% of projects. It's a safe bet if you're unsure!
                   </p>

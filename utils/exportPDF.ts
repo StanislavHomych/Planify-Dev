@@ -52,11 +52,11 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
   doc.setFont('helvetica', 'normal');
   
   summary.teamCosts.forEach((roleCost) => {
-    const roleName = ROLE_NAMES[roleCost.role] || roleCost.role;
+    const roleName = roleCost.customRoleName || ROLE_NAMES[roleCost.role] || roleCost.role;
     const levelName = LEVEL_NAMES[roleCost.level] || roleCost.level;
     const text = `${roleName} (${levelName})`;
     const cost = `$${roleCost.cost.toLocaleString()}`;
-    const hours = `${roleCost.hours} hrs`;
+    const hours = `${roleCost.hours.toFixed(1)} hrs`;
     
     doc.text(text, leftMargin, yPos);
     doc.text(hours, leftMargin + 80, yPos);

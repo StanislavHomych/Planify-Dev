@@ -37,7 +37,7 @@ export default function Step2Design() {
       {/* Design Complexity */}
       <div className="card">
         <label className="label text-xs">Design Complexity</label>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
           {complexityOptions.map((option) => {
             const Icon = option.icon;
             return (
@@ -80,69 +80,161 @@ export default function Step2Design() {
       {/* Additional Design Services */}
       <div className="card">
         <label className="label text-xs">Additional Services</label>
-        <div className="space-y-1.5 mt-2">
-          <label className="flex items-center space-x-3 cursor-pointer p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
-            <input
-              type="checkbox"
-              checked={design.includeLogo}
-              onChange={(e) => updateDesign({ includeLogo: e.target.checked })}
-              className="checkbox-field"
-            />
-            <FiImage className="text-lg text-jira-textSecondary" />
-            <div className="flex-1">
-              <div className="font-medium text-sm text-jira-darkBlue">Logo and Branding</div>
-              <div className="text-xs text-jira-textSecondary">+16 hours</div>
-            </div>
-          </label>
+        <div className="space-y-3 mt-2">
+          {/* Logo and Branding */}
+          <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={design.includeLogo}
+                onChange={(e) => updateDesign({ includeLogo: e.target.checked })}
+                className="checkbox-field"
+              />
+              <FiImage className="text-lg text-jira-textSecondary" />
+              <div className="flex-1">
+                <div className="font-medium text-sm text-jira-darkBlue">Logo and Branding</div>
+                <div className="text-xs text-jira-textSecondary">Default: 36 hours</div>
+              </div>
+            </label>
+            {design.includeLogo && (
+              <div className="mt-2 ml-8">
+                <label className="label text-xs">Custom Hours (optional)</label>
+                <input
+                  type="number"
+                  value={design.customHours?.logo || ''}
+                  onChange={(e) =>
+                    updateDesign({
+                      customHours: {
+                        ...design.customHours,
+                        logo: e.target.value ? Number(e.target.value) : undefined,
+                      },
+                    })
+                  }
+                  placeholder="36"
+                  min="1"
+                  className="input-field text-sm mt-1"
+                />
+              </div>
+            )}
+          </div>
 
-          <label className="flex items-center space-x-3 cursor-pointer p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
-            <input
-              type="checkbox"
-              checked={design.includeIcons}
-              onChange={(e) => updateDesign({ includeIcons: e.target.checked })}
-              className="checkbox-field"
-            />
-            <FiBox className="text-lg text-jira-textSecondary" />
-            <div className="flex-1">
-              <div className="font-medium text-sm text-jira-darkBlue">Icons and Illustrations</div>
-              <div className="text-xs text-jira-textSecondary">+24 hours</div>
-            </div>
-          </label>
+          {/* Icons and Illustrations */}
+          <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={design.includeIcons}
+                onChange={(e) => updateDesign({ includeIcons: e.target.checked })}
+                className="checkbox-field"
+              />
+              <FiBox className="text-lg text-jira-textSecondary" />
+              <div className="flex-1">
+                <div className="font-medium text-sm text-jira-darkBlue">Icons and Illustrations</div>
+                <div className="text-xs text-jira-textSecondary">Default: 54 hours</div>
+              </div>
+            </label>
+            {design.includeIcons && (
+              <div className="mt-2 ml-8">
+                <label className="label text-xs">Custom Hours (optional)</label>
+                <input
+                  type="number"
+                  value={design.customHours?.icons || ''}
+                  onChange={(e) =>
+                    updateDesign({
+                      customHours: {
+                        ...design.customHours,
+                        icons: e.target.value ? Number(e.target.value) : undefined,
+                      },
+                    })
+                  }
+                  placeholder="54"
+                  min="1"
+                  className="input-field text-sm mt-1"
+                />
+              </div>
+            )}
+          </div>
 
-          <label className="flex items-center space-x-3 cursor-pointer p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
-            <input
-              type="checkbox"
-              checked={design.includeAnimations}
-              onChange={(e) => updateDesign({ includeAnimations: e.target.checked })}
-              className="checkbox-field"
-            />
-            <FiZap className="text-lg text-jira-textSecondary" />
-            <div className="flex-1">
-              <div className="font-medium text-sm text-jira-darkBlue">Animations and Micro-interactions</div>
-              <div className="text-xs text-jira-textSecondary">+32 hours</div>
-            </div>
-          </label>
+          {/* Animations and Micro-interactions */}
+          <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={design.includeAnimations}
+                onChange={(e) => updateDesign({ includeAnimations: e.target.checked })}
+                className="checkbox-field"
+              />
+              <FiZap className="text-lg text-jira-textSecondary" />
+              <div className="flex-1">
+                <div className="font-medium text-sm text-jira-darkBlue">Animations and Micro-interactions</div>
+                <div className="text-xs text-jira-textSecondary">Default: 70 hours</div>
+              </div>
+            </label>
+            {design.includeAnimations && (
+              <div className="mt-2 ml-8">
+                <label className="label text-xs">Custom Hours (optional)</label>
+                <input
+                  type="number"
+                  value={design.customHours?.animations || ''}
+                  onChange={(e) =>
+                    updateDesign({
+                      customHours: {
+                        ...design.customHours,
+                        animations: e.target.value ? Number(e.target.value) : undefined,
+                      },
+                    })
+                  }
+                  placeholder="70"
+                  min="1"
+                  className="input-field text-sm mt-1"
+                />
+              </div>
+            )}
+          </div>
 
-          <label className="flex items-center space-x-3 cursor-pointer p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
-            <input
-              type="checkbox"
-              checked={design.include3D}
-              onChange={(e) => updateDesign({ include3D: e.target.checked })}
-              className="checkbox-field"
-            />
-            <FiBox className="text-lg text-jira-textSecondary" />
-            <div className="flex-1">
-              <div className="font-medium text-sm text-jira-darkBlue">3D Graphics</div>
-              <div className="text-xs text-jira-textSecondary">+48 hours</div>
-            </div>
-          </label>
+          {/* 3D Graphics */}
+          <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={design.include3D}
+                onChange={(e) => updateDesign({ include3D: e.target.checked })}
+                className="checkbox-field"
+              />
+              <FiBox className="text-lg text-jira-textSecondary" />
+              <div className="flex-1">
+                <div className="font-medium text-sm text-jira-darkBlue">3D Graphics</div>
+                <div className="text-xs text-jira-textSecondary">Default: 100 hours</div>
+              </div>
+            </label>
+            {design.include3D && (
+              <div className="mt-2 ml-8">
+                <label className="label text-xs">Custom Hours (optional)</label>
+                <input
+                  type="number"
+                  value={design.customHours?.threeD || ''}
+                  onChange={(e) =>
+                    updateDesign({
+                      customHours: {
+                        ...design.customHours,
+                        threeD: e.target.value ? Number(e.target.value) : undefined,
+                      },
+                    })
+                  }
+                  placeholder="100"
+                  min="1"
+                  className="input-field text-sm mt-1"
+                />
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Responsive Design */}
       <div className="card">
         <label className="label text-xs">Responsive Design</label>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
           <label className="flex items-center space-x-3 cursor-pointer p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
             <input
               type="checkbox"

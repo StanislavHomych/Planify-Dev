@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/calculator</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/blog</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/contact</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/blog/about-us</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/blog/privacy-policy</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/blog/terms-of-service</loc>
+  </url>
+
+  <url>
+    <loc>https://planify-dev-ivory.vercel.app/blog/contact-us</loc>
+  </url>
+
+</urlset>
+

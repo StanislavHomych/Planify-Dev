@@ -61,13 +61,13 @@ export default function Step7Summary() {
 
       {/* Main Summary Card */}
       <div className="card bg-jira-blue text-white shadow-jira-lg">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div>
             <div className="flex items-center space-x-2 text-xs uppercase tracking-wide opacity-90 mb-2">
               <FiDollarSign />
               <span>Total Cost</span>
             </div>
-            <div className="text-4xl font-bold mb-1">
+            <div className="text-3xl sm:text-4xl font-bold mb-1 break-words">
               ${summary.totalCost.toLocaleString()}
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Step7Summary() {
               <FiClock />
               <span>Estimated Time</span>
             </div>
-            <div className="text-4xl font-bold mb-1">
+            <div className="text-3xl sm:text-4xl font-bold mb-1">
               {summary.estimatedMonths.toFixed(1)} mo
             </div>
             <div className="text-xs opacity-90">
@@ -86,8 +86,8 @@ export default function Step7Summary() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap gap-3 mt-6 pt-6 border-t border-primary-500">
-          <button onClick={handleExportPDF} className="bg-white text-jira-blue px-5 py-2.5 rounded font-medium hover:bg-gray-50 transition-all shadow-jira flex items-center space-x-2">
+        <div className="flex flex-wrap gap-3 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-primary-500">
+          <button onClick={handleExportPDF} className="bg-white text-jira-blue px-4 sm:px-5 py-2 sm:py-2.5 rounded font-medium hover:bg-gray-50 transition-all shadow-jira flex items-center justify-center space-x-2 w-full sm:w-auto text-sm sm:text-base">
             <FiDownload />
             <span>Download PDF Report</span>
           </button>
@@ -101,25 +101,28 @@ export default function Step7Summary() {
           <h3 className="text-lg font-semibold text-jira-darkBlue">Breakdown by Roles</h3>
         </div>
         <div className="space-y-2">
-          {summary.teamCosts.map((roleCost, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between p-3 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
-            >
-              <div className="flex-1">
-                <div className="font-medium text-sm text-jira-darkBlue">
-                  {ROLE_NAMES[roleCost.role]} ({LEVEL_NAMES[roleCost.level]})
+          {summary.teamCosts.map((roleCost, index) => {
+            const roleName = roleCost.customRoleName || ROLE_NAMES[roleCost.role] || roleCost.role;
+            return (
+              <div
+                key={index}
+                className="flex items-center justify-between p-3 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+              >
+                <div className="flex-1">
+                  <div className="font-medium text-sm text-jira-darkBlue">
+                    {roleName} ({LEVEL_NAMES[roleCost.level]})
+                  </div>
+                  <div className="text-xs text-jira-textSecondary">
+                    {roleCost.hours.toFixed(1)} hours
+                    {roleCost.quantity > 1 && ` × ${roleCost.quantity} people`}
+                  </div>
                 </div>
-                <div className="text-xs text-jira-textSecondary">
-                  {roleCost.hours} hours
-                  {roleCost.quantity > 1 && ` × ${roleCost.quantity} people`}
+                <div className="text-base font-bold text-jira-blue">
+                  ${roleCost.cost.toLocaleString()}
                 </div>
               </div>
-              <div className="text-base font-bold text-jira-blue">
-                ${roleCost.cost.toLocaleString()}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -145,19 +148,19 @@ export default function Step7Summary() {
                     ${featureCost.cost.toLocaleString()}
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
                   <div className="flex items-center space-x-1">
-                    <FiCode className="text-jira-textSecondary" />
+                    <FiCode className="text-jira-textSecondary flex-shrink-0" />
                     <span className="text-jira-textSecondary">Frontend: </span>
                     <span className="font-medium text-jira-darkBlue">{featureCost.frontendHours.toFixed(1)}h</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <FiCode className="text-jira-textSecondary" />
+                    <FiCode className="text-jira-textSecondary flex-shrink-0" />
                     <span className="text-jira-textSecondary">Backend: </span>
                     <span className="font-medium text-jira-darkBlue">{featureCost.backendHours.toFixed(1)}h</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <FiClock className="text-jira-textSecondary" />
+                    <FiClock className="text-jira-textSecondary flex-shrink-0" />
                     <span className="text-jira-textSecondary">Total: </span>
                     <span className="font-medium text-jira-darkBlue">{featureCost.totalHours.toFixed(1)}h</span>
                   </div>
@@ -204,14 +207,14 @@ export default function Step7Summary() {
 
       {/* Final Total */}
       <div className="card bg-jira-darkBlue text-white shadow-jira-md">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div className="text-xs uppercase tracking-wide opacity-80 mb-1">Final Project Cost</div>
-            <div className="text-3xl font-bold">${summary.totalCost.toLocaleString()}</div>
+            <div className="text-2xl sm:text-3xl font-bold break-words">${summary.totalCost.toLocaleString()}</div>
           </div>
-          <div className="text-right">
+          <div className="text-left sm:text-right">
             <div className="text-xs uppercase tracking-wide opacity-80 mb-1">Total Time</div>
-            <div className="text-2xl font-semibold">
+            <div className="text-xl sm:text-2xl font-semibold">
               {summary.estimatedMonths.toFixed(1)} months
             </div>
           </div>
