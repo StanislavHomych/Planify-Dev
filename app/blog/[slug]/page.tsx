@@ -506,7 +506,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
       </footer>
 
       {/* JSON-LD Structured Data */}
-      {article.faqSchema && (
+      {'faqSchema' in article && article.faqSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
