@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useCalculatorStore } from '@/store/calculator';
 import ProjectTypeSelector from '@/components/ProjectTypeSelector';
 import Step1Team from '@/components/steps/Step1Team';
@@ -10,6 +10,7 @@ import Step4TechStack from '@/components/steps/Step4TechStack';
 import Step5Testing from '@/components/steps/Step5Testing';
 import Step6Additional from '@/components/steps/Step6Additional';
 import Step7Summary from '@/components/steps/Step7Summary';
+import { trackCalcStarted } from '@/utils/gtm';
 import * as FiIcons from 'react-icons/fi';
 import Link from 'next/link';
 
@@ -35,12 +36,22 @@ export default function CalculatorPage() {
   const { currentStep, setCurrentStep, resetCalculator, team } = useCalculatorStore();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showProjectTypeSelector, setShowProjectTypeSelector] = useState(false);
+  const hasTrackedStarted = useRef(false);
 
   // Reset calculator when page is first loaded
   useEffect(() => {
     resetCalculator();
     setShowProjectTypeSelector(false);
+    hasTrackedStarted.current = false; // Reset tracking when calculator is reset
   }, []); // Empty dependency array ensures this runs only once on mount
+
+  // Track calc_started when user reaches step 1 (either by clicking Next or navigating)
+  useEffect(() => {
+    if (currentStep === 1 && team.length > 0 && !hasTrackedStarted.current) {
+      trackCalcStarted();
+      hasTrackedStarted.current = true;
+    }
+  }, [currentStep, team.length]);
 
   const CurrentStepComponent = STEPS[currentStep].component;
 

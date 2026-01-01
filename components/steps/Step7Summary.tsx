@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useCalculatorStore } from '@/store/calculator';
 import { ROLE_NAMES, LEVEL_NAMES } from '@/data/features';
+import { trackCalcFinished } from '@/utils/gtm';
 import * as FiIcons from 'react-icons/fi';
 import { exportToPDF } from '@/utils/exportPDF';
 
@@ -18,10 +19,19 @@ const FiCheckCircle = FiIcons.FiCheckCircle;
 
 export default function Step7Summary() {
   const { summary, calculateSummary, team, projectName } = useCalculatorStore();
+  const hasTrackedFinished = useRef(false);
 
   useEffect(() => {
     calculateSummary();
   }, [calculateSummary]);
+
+  // Track calc_finished when summary is calculated (only once)
+  useEffect(() => {
+    if (summary && summary.totalCost > 0 && !hasTrackedFinished.current) {
+      trackCalcFinished(summary.totalCost);
+      hasTrackedFinished.current = true;
+    }
+  }, [summary]);
 
   if (!summary) {
     return (
