@@ -27,6 +27,12 @@ const articles = [
     title: 'Contact Us',
     date: '29/12/2025',
     excerpt: 'If you have questions about Projecto, the website, or how the service works, you can reach us using the contact information below.'
+  },
+  {
+    slug: 'project-cost-calculation',
+    title: 'How to Calculate Project Cost: A Complete Guide',
+    date: '01/01/2026',
+    excerpt: 'Learn how to calculate project cost realistically, what factors influence software development cost, and how modern estimation tools help teams plan with confidence.'
   }
 ];
 

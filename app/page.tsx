@@ -161,6 +161,85 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* FAQ Section */}
+        <div className="mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-jira-darkBlue px-2">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                How accurate are the estimates?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed">
+                Projekto estimates are based on role-based effort benchmarks and typical development workloads. They provide a realistic planning range, but final cost and delivery time may vary depending on scope, requirements, technical choices, and execution.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                Is this a fixed price quote?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed">
+                No. The results are not a quote and are not binding. They are intended to support early planning and budgeting, not to serve as a contractual offer.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                What types of projects does Projekto support?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed mb-2">
+                Projekto is suitable for:
+              </p>
+              <ul className="list-disc list-inside text-jira-textSecondary text-sm space-y-1 ml-4">
+                <li>Web applications</li>
+                <li>Mobile apps (iOS and Android)</li>
+                <li>MVPs and early-stage products</li>
+                <li>Internal tools and dashboards</li>
+                <li>SaaS platforms</li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                Can I use this for client proposals?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed">
+                Yes. Many agencies and freelancers use Projekto for early estimates and internal planning. For client-facing proposals, we recommend validating the output with detailed scoping before finalizing price and timeline.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                Do you store my project data?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed">
+                Projekto does not require you to submit sensitive project data. Calculator inputs are used only to generate estimates and improve the experience. If you contact us directly, your contact details are used solely to respond to your inquiry.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                Will the calculator improve over time?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed">
+                Yes. Projekto is continuously refined using updated benchmarks, industry trends, and feedback to improve accuracy and usability.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2 text-jira-darkBlue">
+                How are the estimates calculated?
+              </h3>
+              <p className="text-jira-textSecondary text-sm leading-relaxed">
+                Projekto uses role-based effort modeling combined with feature-level complexity scoring and design scope inputs. Total effort is converted into cost using role-specific rates and the selected team composition. Planning buffers are applied to reflect real-world delivery, and results are presented as ranges rather than fixed numbers.
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
 
       {/* Footer */}
@@ -202,7 +281,7 @@ export default function Home() {
               <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">LEGAL</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/privacy" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                  <Link href="/blog/privacy-policy" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
@@ -228,6 +307,13 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Disclaimer */}
+          <div className="border-t border-jira-border pt-6 mb-6">
+            <p className="text-xs text-jira-textSecondary leading-relaxed max-w-4xl">
+              <strong className="text-jira-darkBlue">Disclaimer:</strong> Projecto provides high-level estimates for web and mobile application development based on typical industry practices, average market rates, and the inputs you provide. All calculations are indicative only and should not be interpreted as fixed quotes, contractual offers, or professional advice. Actual project cost and delivery time may vary depending on: scope changes; technical complexity; team structure and experience; third-party services and integrations; project management and execution approach. Projecto is designed to support early planning, budgeting, and decision-making, not to replace detailed technical scoping or formal proposals. Use of this calculator is at your own discretion.
+            </p>
+          </div>
+
           {/* Separator */}
           <div className="border-t border-jira-border my-8"></div>
 
@@ -237,7 +323,7 @@ export default function Home() {
               <p>© 2025 Projekto. All rights reserved.</p>
             </div>
             <div className="flex space-x-3 sm:space-x-4">
-              <Link href="/privacy" className="hover:text-jira-blue transition-colors">
+              <Link href="/blog/privacy-policy" className="hover:text-jira-blue transition-colors">
                 Privacy
               </Link>
               <span className="text-jira-border">•</span>
@@ -248,6 +334,75 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* SEO FAQ Schema (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How accurate are the estimates?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Projekto estimates are based on role-based effort benchmarks and typical development workloads. They provide a realistic planning range, but final cost and delivery time can vary depending on scope, requirements, technical choices, and execution."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this a fixed price quote?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The results are not a quote and are not binding. They are intended to support early planning and budgeting, not to serve as a contractual offer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What types of projects does Projekto support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Projekto is suitable for web applications, mobile apps (iOS and Android), MVPs, internal tools and dashboards, and SaaS platforms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use this for client proposals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Many agencies and freelancers use Projekto for early estimates and internal planning. For client proposals, it's recommended to validate the output with detailed scoping before finalizing a price and timeline."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you store my project data?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Projekto does not require you to submit sensitive project data. Calculator inputs are used to generate estimates and improve the experience. If you contact us directly, we only use your contact details to respond."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will the calculator improve over time?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Projekto is continuously refined using updated benchmarks, industry trends, and feedback to improve accuracy and usability."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How are the estimates calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Projekto uses role-based effort modeling combined with feature complexity scoring and design scope inputs. Total effort is converted into cost using role-specific rates and team composition, with planning buffers applied to reflect real-world delivery. Results are presented as ranges rather than fixed numbers."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </div>
   );
 }

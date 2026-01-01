@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { useEffect } from 'react';
 import * as Fi from 'react-icons/fi';
 
 const articles = {
@@ -149,14 +150,38 @@ const articles = {
   },
   'privacy-policy': {
     title: 'Privacy Policy',
-    date: '29/12/2025',
+    date: '01/01/2026',
     content: (
       <div className="prose prose-lg max-w-none">
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto respects user privacy and is committed to protecting personal and project-related data.
+          <strong>Last updated: 01.01.2026</strong>
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          At Projecto, we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how information is collected, used, and safeguarded when you access or use our website and estimation tools.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Information We Process</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">1. Information We Collect</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          We collect information in the following ways:
+        </p>
+        
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">Information You Provide</h3>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Data entered into the Projecto calculator (such as project type, features, estimated scope, timelines, or budgets)</li>
+          <li>Contact information if you voluntarily reach out to us (for example, via email)</li>
+        </ul>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">Information Collected Automatically</h3>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>IP address (processed in anonymized or aggregated form where possible)</li>
+          <li>Browser and device information</li>
+          <li>Pages visited, session duration, and interaction data</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          This information helps us understand how users interact with Projecto and improve the quality of our services.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">2. Purpose of Data Processing</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
           Projecto processes only the information that users voluntarily provide while using the service. This may include project-related details such as scope descriptions, technology stack selections, team roles, timelines, and cost estimates entered by the user.
         </p>
@@ -164,159 +189,186 @@ const articles = {
           Projecto does not require mandatory account creation, personal identification, or contact details in order to use the core functionality of the website.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">How Data Is Used</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          User-provided information is used exclusively to:
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          We process information in order to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>generate project estimates and structured summaries,</li>
-          <li>organize and present project scope, team composition, and technology choices,</li>
-          <li>improve clarity and usability of project planning outputs.</li>
+          <li>Provide, maintain, and improve Projecto</li>
+          <li>Analyze usage trends and optimize user experience</li>
+          <li>Respond to inquiries and provide support</li>
+          <li>Ensure platform security and prevent misuse</li>
         </ul>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Project data is not used for advertising personalization, marketing profiling, or resale.
+          Projecto does not sell, rent, or trade personal data.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Data Storage</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Project information is processed only to deliver the requested estimation and planning features. Data is not stored permanently beyond what is technically necessary to provide the service.
-        </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto does not create user profiles, databases of personal information, or behavioral tracking based on project content.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Third-Party Services</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          The website may use standard analytics and advertising services (such as Google Analytics or Google AdSense) to support site operation and maintenance. These third-party services may use cookies or similar technologies in accordance with their own privacy policies.
-        </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto does not share user-provided project data with third parties.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">User Consent</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-6">
-          By using Projecto and submitting project information, users confirm that they have the right to use the provided data and consent to its processing for the purpose of generating project estimates and planning insights.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Cookies and Tracking Technologies</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto may use cookies and similar tracking technologies to enhance user experience, analyze site usage, and support website functionality. These technologies help us understand how users interact with the service and improve our platform.
-        </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Users can control cookie preferences through their browser settings. However, disabling certain cookies may affect the functionality of the website.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Data Security</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          We implement appropriate technical and organizational measures to protect user data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.
-        </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-6">
-          While we strive to protect your information, we cannot guarantee absolute security of data transmitted to or stored on our servers.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">User Rights</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Users have the right to:
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">3. Cookies and Tracking Technologies</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Projecto uses cookies and similar technologies to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>access and review their project data,</li>
-          <li>delete or remove their project information at any time,</li>
-          <li>export their project data for their own use,</li>
-          <li>withdraw consent for data processing, subject to technical limitations.</li>
+          <li>Enable essential website functionality</li>
+          <li>Measure traffic and performance</li>
+          <li>Improve usability and content relevance</li>
         </ul>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          To exercise these rights, users can contact us using the contact information provided on our website.
+          You may control or disable cookies through your browser settings.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Children's Privacy</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">4. Third-Party Services</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          We may rely on reputable third-party service providers for:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Analytics</li>
+          <li>Hosting and infrastructure</li>
+          <li>Performance monitoring</li>
+        </ul>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto is not intended for users under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child without parental consent, we will take steps to delete such information promptly.
+          These providers process data solely on our behalf and in compliance with applicable data-protection regulations.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">International Data Transfers</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">5. Data Retention</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto may process and store user data in servers located outside the user's country of residence. By using the service, users consent to the transfer of their data to such locations, which may have different data protection laws than their home country.
+          Personal data is retained only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Changes to This Privacy Policy</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">6. Your Rights Under GDPR</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          If you are located in the European Union, you have the right to:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Access your personal data</li>
+          <li>Request correction or deletion</li>
+          <li>Restrict or object to processing</li>
+          <li>Withdraw consent at any time</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Requests may be submitted by contacting us using the details below.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">7. Data Security</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          We implement appropriate technical and organizational safeguards to protect personal data against unauthorized access, alteration, disclosure, or destruction.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">8. Updates to This Policy</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          This Privacy Policy may be updated periodically. Any changes will be reflected on this page with a revised "Last updated" date.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">9. Contact Information</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will update the "Last updated" date at the top of this policy.
+          For questions regarding this Privacy Policy, please contact:
         </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-6">
-          We encourage users to review this Privacy Policy periodically to stay informed about how we collect, use, and protect their information. Continued use of the service after changes indicates acceptance of the updated policy.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Contact Information</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
-        </p>
-        <div className="mb-6">
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          <strong>Email:</strong>{' '}
           <a 
             href="mailto:hello@affsquad.com" 
-            className="text-jira-blue hover:underline text-lg"
+            className="text-jira-blue hover:underline"
           >
             hello@affsquad.com
           </a>
-        </div>
+        </p>
       </div>
     )
   },
   'terms-of-service': {
     title: 'Terms of Service',
-    date: '29/12/2025',
+    date: '01/01/2026',
     content: (
       <div className="prose prose-lg max-w-none">
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          By using Projecto, you agree to the following terms.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Service Description</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto provides an automated project estimation and planning tool. The service helps users structure project scope, technology stack, team composition, timelines, and cost estimates based on user-provided inputs.
+          <strong>Last updated: 01.01.2026</strong>
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          The service is provided "as is" and for informational and planning purposes only.
+          These Terms of Service govern your access to and use of Projecto. By using the website, you agree to these Terms. If you do not agree, please discontinue use of the service.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">User Responsibilities</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">1. Service Overview</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Users are responsible for:
+          Projecto is an online tool designed to provide high-level estimates of development time and budget for web and mobile application projects.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          All outputs are indicative estimates and are provided for informational purposes only.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">2. No Professional Advice or Guarantees</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Projecto does not provide legal, financial, or professional consulting services.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Estimates generated by the platform:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>providing only information they own or have the right to use,</li>
-          <li>ensuring that all submitted project details are accurate and lawful,</li>
-          <li>using Projecto in compliance with applicable laws and regulations.</li>
+          <li>Are not binding quotes</li>
+          <li>Do not constitute contractual offers</li>
+          <li>May differ from real-world project costs and timelines</li>
         </ul>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">No Guarantees</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          While we strive to provide clear and consistent estimation outputs, Projecto does not guarantee that generated estimates are complete, error-free, or suitable for making business, legal, or financial decisions.
-        </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          All outputs should be considered approximate planning tools, not professional advice.
+          Actual outcomes depend on numerous variables, including scope, requirements, technology choices, and execution.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Intellectual Property</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          All website content, branding, design, and software logic belong to Projecto unless otherwise stated.
-        </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Users retain full ownership of all project data and information they provide to the service.
-        </p>
-
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Limitation of Liability</h2>
-        <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto is not responsible for:
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">3. Acceptable Use</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          By using Projecto, you agree to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>decisions made based on generated estimates or planning outputs,</li>
-          <li>data loss caused by user error or misuse of the service,</li>
-          <li>interruptions, delays, or temporary unavailability of the website.</li>
+          <li>Use the service only for lawful purposes</li>
+          <li>Refrain from attempting to disrupt, reverse-engineer, or abuse the platform</li>
+          <li>Not misuse or copy the calculator logic, content, or design without authorization</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Changes to These Terms</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">4. Intellectual Property</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          All intellectual property associated with Projecto — including software logic, content, design elements, and branding — remains the exclusive property of Projecto unless otherwise stated.
+        </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto may update these Terms of Service from time to time. Continued use of the service after changes indicates acceptance of the updated terms.
+          Unauthorized reproduction or redistribution is prohibited.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">5. Limitation of Liability</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          To the fullest extent permitted by law:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Projecto shall not be liable for any direct, indirect, incidental, or consequential damages</li>
+          <li>We are not responsible for decisions, losses, or outcomes resulting from reliance on calculator estimates</li>
+          <li>Use of the service is at your own discretion and risk</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">6. Service Availability</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          We aim to ensure reliable availability but do not guarantee uninterrupted or error-free access. We reserve the right to modify, suspend, or discontinue any part of the service at any time.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">7. External Links</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Projecto may include links to third-party websites. We are not responsible for the content, policies, or practices of such external sites.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">8. Governing Law</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          These Terms shall be governed by and interpreted in accordance with the laws of the Republic of Poland and applicable European Union regulations.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">9. Changes to These Terms</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          We may revise these Terms periodically. Continued use of Projecto following any updates constitutes acceptance of the revised Terms.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">10. Contact Information</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          For questions regarding these Terms, please contact:
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          <strong>Email:</strong>{' '}
+          <a 
+            href="mailto:hello@affsquad.com" 
+            className="text-jira-blue hover:underline"
+          >
+            hello@affsquad.com
+          </a>
         </p>
       </div>
     )
@@ -365,6 +417,492 @@ const articles = {
         </p>
       </div>
     )
+  },
+  'project-cost-calculation': {
+    title: 'How to Calculate Project Cost: A Complete Guide',
+    date: '01/01/2026',
+    content: (
+      <div className="prose prose-lg max-w-none">
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Estimating the cost of a software project is one of the most challenging — and most critical — steps in product planning. Inaccurate project cost calculation often leads to budget overruns, missed deadlines, and strained relationships between founders, teams, and stakeholders.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          This guide explains how to calculate project cost realistically, what factors truly influence software development cost, and how modern estimation tools help teams plan with confidence.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">What Is Project Cost Calculation?</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Project cost calculation is the process of estimating the total financial investment required to design, build, test, and deliver a software product.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          A realistic calculation goes far beyond a single number. It considers:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Team composition and hourly rates</li>
+          <li>Design scope and complexity</li>
+          <li>Feature set and technical requirements</li>
+          <li>Quality assurance and testing effort</li>
+          <li>Additional costs such as documentation, support, and buffers</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          The goal is not perfection, but a reliable planning range that supports informed decisions.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Why Most Software Projects Go Over Budget</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Many projects exceed their initial budget because estimates are based on assumptions rather than structured analysis.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Common reasons include:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Features defined too vaguely</li>
+          <li>Design effort underestimated</li>
+          <li>Testing treated as optional</li>
+          <li>No buffer for changes or unknowns</li>
+          <li>Ignoring post-launch support costs</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          A professional project cost calculation explicitly accounts for these realities instead of hoping they won't happen.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Core Components of Project Cost Calculation</h2>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">1. Team Composition and Rates</h3>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Every software project is built by people — and people are the primary cost driver.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          A realistic estimate starts with defining:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Roles (frontend, backend, QA, design, management)</li>
+          <li>Skill level (junior, middle, senior)</li>
+          <li>Hourly rates</li>
+          <li>Number of team members</li>
+          <li>Daily availability</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          For example, a single frontend developer working 8 hours per day at $50/hour already represents $400 per day, before adding any other roles.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Ignoring team structure is one of the fastest ways to miscalculate project cost.
+        </p>
+        <div className="my-6">
+          <img 
+            src="/image5.png" 
+            alt="Software project cost calculation tool showing team roles, hourly rates, and development effort setup"
+            className="w-full rounded-lg border border-jira-border"
+          />
+        </div>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">2. Design Complexity and Scope</h3>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Design is not just "making screens look nice." It includes:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>User flows</li>
+          <li>Interaction logic</li>
+          <li>Responsive layouts</li>
+          <li>Platform-specific variations</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Project cost calculation should consider:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Design complexity (simple, medium, complex)</li>
+          <li>Number of screens or pages</li>
+          <li>Additional services such as branding, illustrations, animations, or 3D assets</li>
+          <li>Target platforms (mobile, tablet, desktop)</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          A web app with 10 screens and medium complexity can require weeks of design effort, not days.
+        </p>
+        <div className="my-6">
+          <img 
+            src="/image1.png" 
+            alt="Design complexity and mockups selection in a software project cost calculation tool, including screens, branding, and responsive design"
+            className="w-full rounded-lg border border-jira-border"
+          />
+        </div>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">3. Features and Functional Capabilities</h3>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Features are where most project budgets grow — and where estimation mistakes are most costly.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          A professional calculation breaks features into categories such as:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Authentication and security</li>
+          <li>User profiles</li>
+          <li>Payments and subscriptions</li>
+          <li>Communication features (chat, notifications, video)</li>
+          <li>Data handling and search</li>
+          <li>Analytics and reporting</li>
+          <li>Administration and moderation</li>
+          <li>Media processing</li>
+          <li>Integrations with third-party services</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Each feature has frontend and backend effort, and often hidden complexity in testing and edge cases.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Counting features without estimating effort is not estimation, it's guessing.
+        </p>
+        <div className="my-6">
+          <img 
+            src="/image6.png" 
+            alt="Feature selection step in a software project cost calculation tool showing authentication and security features with estimated frontend and backend hours"
+            className="w-full rounded-lg border border-jira-border"
+          />
+        </div>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">4. Technology Stack and Architecture</h3>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Technology choices affect:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Development speed</li>
+          <li>Maintenance cost</li>
+          <li>Scalability</li>
+          <li>Security requirements</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Different stacks introduce different complexity levels. For example:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Real-time features require additional backend infrastructure</li>
+          <li>Payment systems require compliance and validation logic</li>
+          <li>APIs and integrations require coordination with external services</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          A proper project cost calculation aligns technical decisions with business goals, not trends.
+        </p>
+        <div className="my-6">
+          <img 
+            src="/image2.png" 
+            alt="Technology stack selection modal in a software project cost calculation tool showing recommended frontend and backend stacks"
+            className="w-full rounded-lg border border-jira-border"
+          />
+        </div>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">5. Testing and Quality Assurance</h3>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Testing is not optional if reliability matters.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Project cost calculation should include:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Manual testing as a percentage of development time</li>
+          <li>Automated tests for medium and large projects</li>
+          <li>Coverage of critical business logic</li>
+          <li>End-to-end user flow verification</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Industry benchmarks typically allocate 15–25% of development time to QA. Projects that skip this phase often pay much more later.
+        </p>
+        <div className="my-6">
+          <img 
+            src="/image3.png" 
+            alt="Testing and QA configuration in a software project cost calculation tool showing manual testing percentage and automated testing options"
+            className="w-full rounded-lg border border-jira-border"
+          />
+        </div>
+
+        <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">6. Additional and Hidden Costs</h3>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Many estimates fail because they stop at "development complete."
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Real projects often include:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Post-launch support and maintenance</li>
+          <li>Technical documentation</li>
+          <li>User guides</li>
+          <li>Buffer for requirement changes</li>
+          <li>Domain, SSL, and third-party service costs</li>
+          <li>Software licenses and tooling</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          A buffer of 15–25% is not pessimism — it's realism.
+        </p>
+        <div className="my-6">
+          <img 
+            src="/image4.png" 
+            alt="Additional costs configuration in a software project cost calculation tool showing support options, documentation, buffers, and third-party expenses"
+            className="w-full rounded-lg border border-jira-border"
+          />
+        </div>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Fixed Price vs Time & Materials</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Understanding pricing models is essential for accurate cost calculation.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          <strong>Fixed price</strong> works best when:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Scope is fully defined</li>
+          <li>Requirements are unlikely to change</li>
+          <li>Risk is transferred to the vendor (at a premium)</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          <strong>Time & materials</strong> is better when:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Scope evolves</li>
+          <li>Flexibility is required</li>
+          <li>Transparency matters</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Most modern software projects are better served by estimation ranges, not fixed promises.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Why Single-Number Estimates Fail</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Software development is not manufacturing. Unknowns are inevitable.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Single-number estimates:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Ignore risk</li>
+          <li>Create false confidence</li>
+          <li>Break trust when reality differs</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Professional project cost calculation uses ranges to reflect uncertainty while still enabling planning.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">How Modern Tools Improve Project Cost Calculation</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Modern estimation tools structure the process by:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Breaking projects into roles, features, and stages</li>
+          <li>Applying realistic effort ranges</li>
+          <li>Converting effort into cost using real rates</li>
+          <li>Making assumptions visible and adjustable</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          This approach mirrors how experienced agencies and product teams plan projects internally.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">How Projecto Calculates Project Cost</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          <Link href="/" className="text-jira-blue hover:underline">Projecto</Link> follows industry-standard estimation principles:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li><strong>Role-based effort modeling:</strong> Each role contributes time based on selected features and scope.</li>
+          <li><strong>Design and feature complexity scoring:</strong> Effort scales with screens, interactions, and technical depth.</li>
+          <li><strong>Parallel work consideration:</strong> Timelines reflect multiple roles working simultaneously.</li>
+          <li><strong>Testing and QA allocation:</strong> Quality assurance is included, not optional.</li>
+          <li><strong>Additional costs and buffers:</strong> Real-world overhead is built into the final estimate.</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Results are presented as transparent ranges, not artificial certainty.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">When Should Estimates Be Refined?</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Project cost calculation is iterative.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          You should refine estimates when:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Requirements become clearer</li>
+          <li>Technical decisions are finalized</li>
+          <li>External dependencies are confirmed</li>
+          <li>Scope changes significantly</li>
+        </ul>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Early estimates guide decisions. Later estimates guide execution.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Start Your Project Cost Calculation</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Accurate project cost calculation doesn't require weeks of spreadsheets or guesswork.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-2">
+          Using a structured estimation approach allows you to:
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
+          <li>Understand cost drivers</li>
+          <li>Compare options</li>
+          <li>Plan realistically</li>
+          <li>Reduce risk before committing budget</li>
+        </ul>
+        <div className="my-8 text-center">
+          <Link 
+            href="/calculator" 
+            className="btn-primary text-base sm:text-lg inline-flex items-center space-x-2 px-6 py-3"
+          >
+            <span>Start Calculation</span>
+            <Fi.FiArrowRight className="text-lg sm:text-xl" />
+          </Link>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-12 border-t border-jira-border pt-8">
+          <h2 className="text-2xl font-bold text-jira-darkBlue mb-6">FAQ</h2>
+          
+          <div className="space-y-6">
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                What is project cost calculation?
+              </h3>
+              <p className="text-jira-textSecondary">
+                Project cost calculation is the process of estimating the total budget required to design, develop, test, and deliver a software project. It includes team costs, design effort, feature complexity, testing, and buffers for unexpected changes.
+              </p>
+            </div>
+
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                Why is project cost calculation difficult for software projects?
+              </h3>
+              <p className="text-jira-textSecondary">
+                Software projects involve changing requirements, technical uncertainty, and multiple roles working in parallel. These factors make single-number or fixed estimates unreliable without structured cost modeling.
+              </p>
+            </div>
+
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                What factors affect project cost calculation the most?
+              </h3>
+              <p className="text-jira-textSecondary">
+                The biggest cost drivers are team composition and hourly rates, design complexity, number and complexity of features, technology stack decisions, testing requirements, and buffers for unforeseen work.
+              </p>
+            </div>
+
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                Does project cost calculation include testing and QA?
+              </h3>
+              <p className="text-jira-textSecondary">
+                Yes. A realistic project cost calculation includes both manual and automated testing. Industry best practices typically allocate 15–25% of total development time to quality assurance.
+              </p>
+            </div>
+
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                Should project cost estimates be a fixed number?
+              </h3>
+              <p className="text-jira-textSecondary">
+                No. Professional project cost calculation uses ranges rather than fixed numbers to reflect uncertainty, scope changes, and differences in execution between teams.
+              </p>
+            </div>
+
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                When should project cost estimates be updated?
+              </h3>
+              <p className="text-jira-textSecondary">
+                Estimates should be refined as requirements become clearer, technical decisions are finalized, and scope changes occur during planning or execution.
+              </p>
+            </div>
+
+            <div className="pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
+                Can project cost calculation be done at the idea stage?
+              </h3>
+              <p className="text-jira-textSecondary">
+                Yes. High-level project cost calculation can be performed early using assumptions about scope, features, and team structure. Accuracy improves as more details are defined.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is project cost calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Project cost calculation is the process of estimating the total budget required to design, develop, test, and deliver a software project. It includes team costs, design effort, feature complexity, testing, and additional buffers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is project cost calculation difficult for software projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Software projects involve changing requirements, technical uncertainty, and multiple roles working in parallel. These factors make fixed or single-number estimates unreliable without structured cost modeling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What factors affect project cost calculation the most?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The biggest cost drivers are team composition and rates, design complexity, number and complexity of features, technology stack, testing requirements, and buffers for unexpected changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does project cost calculation include testing and QA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A realistic project cost calculation includes manual and automated testing. Industry best practices typically allocate 15–25% of development time to quality assurance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should project cost estimates be a fixed number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Professional project cost calculation uses ranges rather than fixed numbers to reflect uncertainty, scope changes, and execution differences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should project cost estimates be updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estimates should be refined as project requirements become clearer, technical decisions are finalized, and scope changes occur during planning or execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can project cost calculation be done at the idea stage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. High-level project cost calculation can be done early using assumptions about scope, features, and team structure. Accuracy improves as more details are defined."
+          }
+        }
+      ]
+    },
+    breadcrumbSchema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://projecto-calculator.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://projecto-calculator.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Project Cost Calculation",
+          "item": "https://projecto-calculator.com/blog/project-cost-calculation"
+        }
+      ]
+    }
   }
 };
 
@@ -374,6 +912,43 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
   if (!article) {
     notFound();
   }
+
+  // Add JSON-LD schemas to head
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+
+    // Remove existing schema scripts if any
+    const existingScripts = document.head.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => {
+      if (script.id === 'faq-schema' || script.id === 'breadcrumb-schema') {
+        script.remove();
+      }
+    });
+
+    // Add FAQ schema to head
+    if ('faqSchema' in article && article.faqSchema) {
+      const faqScript = document.createElement('script');
+      faqScript.id = 'faq-schema';
+      faqScript.type = 'application/ld+json';
+      faqScript.innerHTML = JSON.stringify(article.faqSchema);
+      document.head.appendChild(faqScript);
+    }
+
+    // Add Breadcrumb schema to head
+    if ('breadcrumbSchema' in article && article.breadcrumbSchema) {
+      const breadcrumbScript = document.createElement('script');
+      breadcrumbScript.id = 'breadcrumb-schema';
+      breadcrumbScript.type = 'application/ld+json';
+      breadcrumbScript.innerHTML = JSON.stringify(article.breadcrumbSchema);
+      document.head.appendChild(breadcrumbScript);
+    }
+
+    // Cleanup function
+    return () => {
+      const scriptsToRemove = document.head.querySelectorAll('script[id="faq-schema"], script[id="breadcrumb-schema"]');
+      scriptsToRemove.forEach(script => script.remove());
+    };
+  }, [article]);
 
   return (
     <div className="min-h-screen bg-jira-background">
@@ -504,16 +1079,6 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
           </div>
         </div>
       </footer>
-
-      {/* JSON-LD Structured Data */}
-      {'faqSchema' in article && article.faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(article.faqSchema)
-          }}
-        />
-      )}
     </div>
   );
 }
