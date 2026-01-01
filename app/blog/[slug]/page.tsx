@@ -12,23 +12,23 @@ const articles = {
     content: (
       <div className="prose prose-lg max-w-none">
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto is an independent online service designed to help teams and businesses estimate software projects more clearly and efficiently.
+          Projekto is an independent online service designed to help teams and businesses estimate software projects more clearly and efficiently.
         </p>
 
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Modern digital products require accurate planning, clear scope definition, and transparency around technology choices and team composition. While many estimates are created manually or scattered across documents, Projecto provides a structured way to define project scope, technology stack, team roles, timelines, and cost estimates in one place.
+          Modern digital products require accurate planning, clear scope definition, and transparency around technology choices and team composition. While many estimates are created manually or scattered across documents, Projekto provides a structured way to define project scope, technology stack, team roles, timelines, and cost estimates in one place.
         </p>
 
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          The platform allows users to create and manage project estimates based on their own inputs. Projecto focuses on clarity, structure, and consistency — helping users turn ideas into well-defined project plans that are easy to review, share, and refine.
+          The platform allows users to create and manage project estimates based on their own inputs. Projekto focuses on clarity, structure, and consistency — helping users turn ideas into well-defined project plans that are easy to review, share, and refine.
         </p>
 
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto does not provide project management, hiring, or development services. The website exists solely as an estimation and planning tool that helps users organize project-related information at their request.
+          Projekto does not provide project management, hiring, or development services. The website exists solely as an estimation and planning tool that helps users organize project-related information at their request.
         </p>
 
         <p className="text-jira-textSecondary leading-relaxed mb-8">
-          We aim to deliver a simple, transparent, and practical experience for early-stage planning and decision-making. Projecto is an independent product and is not affiliated with any software vendors, development agencies, or third-party platforms.
+          We aim to deliver a simple, transparent, and practical experience for early-stage planning and decision-making. Projekto is an independent product and is not affiliated with any software vendors, development agencies, or third-party platforms.
         </p>
 
         {/* FAQ Section */}
@@ -38,52 +38,52 @@ const articles = {
           <div className="space-y-6">
             <div className="border-b border-jira-border pb-4">
               <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
-                What is Projecto?
+                What is Projekto?
               </h3>
               <p className="text-jira-textSecondary">
-                Projecto is an online tool that helps users create structured software project estimates, including scope, technology stack, team roles, timelines, and cost breakdowns.
+                Projekto is an online tool that helps users create structured software project estimates, including scope, technology stack, team roles, timelines, and cost breakdowns.
               </p>
             </div>
 
             <div className="border-b border-jira-border pb-4">
               <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
-                Who is Projecto for?
+                Who is Projekto for?
               </h3>
               <p className="text-jira-textSecondary">
-                Projecto is designed for startups, product managers, founders, agencies, and development teams who need clear and well-organized project estimates.
+                Projekto is designed for startups, product managers, founders, agencies, and development teams who need clear and well-organized project estimates.
               </p>
             </div>
 
             <div className="border-b border-jira-border pb-4">
               <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
-                Do I need to create an account to use Projecto?
+                Do I need to create an account to use Projekto?
               </h3>
               <p className="text-jira-textSecondary">
-                No. Projecto can be used without mandatory registration. Some features may be optional and available without creating an account.
+                No. Projekto can be used without mandatory registration. Some features may be optional and available without creating an account.
               </p>
             </div>
 
             <div className="border-b border-jira-border pb-4">
               <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
-                Does Projecto build or manage projects?
+                Does Projekto build or manage projects?
               </h3>
               <p className="text-jira-textSecondary">
-                No. Projecto does not provide development, hiring, or project management services. It is an estimation and planning tool only.
+                No. Projekto does not provide development, hiring, or project management services. It is an estimation and planning tool only.
               </p>
             </div>
 
             <div className="border-b border-jira-border pb-4">
               <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
-                Is Projecto affiliated with any development agencies or software vendors?
+                Is Projekto affiliated with any development agencies or software vendors?
               </h3>
               <p className="text-jira-textSecondary">
-                No. Projecto is an independent platform and is not affiliated with or endorsed by any agencies, vendors, or third-party services.
+                No. Projekto is an independent platform and is not affiliated with or endorsed by any agencies, vendors, or third-party services.
               </p>
             </div>
 
             <div className="pb-4">
               <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">
-                Is Projecto free to use?
+                Is Projekto free to use?
               </h3>
               <p className="text-jira-textSecondary">
                 Core functionality is available for free. Some advanced features may be introduced in the future to support ongoing development and maintenance.
@@ -99,47 +99,47 @@ const articles = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Projecto?",
+          "name": "What is Projekto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Projecto is an online tool that helps users create structured software project estimates, including scope, technology stack, team roles, timelines, and cost breakdowns."
+            "text": "Projekto is an online tool that helps users create structured software project estimates, including scope, technology stack, team roles, timelines, and cost breakdowns."
           }
         },
         {
           "@type": "Question",
-          "name": "Who is Projecto for?",
+          "name": "Who is Projekto for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Projecto is designed for startups, product managers, founders, agencies, and development teams who need clear and well-organized project estimates."
+            "text": "Projekto is designed for startups, product managers, founders, agencies, and development teams who need clear and well-organized project estimates."
           }
         },
         {
           "@type": "Question",
-          "name": "Do I need to create an account to use Projecto?",
+          "name": "Do I need to create an account to use Projekto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Projecto can be used without mandatory registration. Some features may be optional and available without creating an account."
+            "text": "No. Projekto can be used without mandatory registration. Some features may be optional and available without creating an account."
           }
         },
         {
           "@type": "Question",
-          "name": "Does Projecto build or manage projects?",
+          "name": "Does Projekto build or manage projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Projecto does not provide development, hiring, or project management services. It is an estimation and planning tool only."
+            "text": "No. Projekto does not provide development, hiring, or project management services. It is an estimation and planning tool only."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Projecto affiliated with any development agencies or software vendors?",
+          "name": "Is Projekto affiliated with any development agencies or software vendors?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Projecto is an independent platform and is not affiliated with or endorsed by any agencies, vendors, or third-party services."
+            "text": "No. Projekto is an independent platform and is not affiliated with or endorsed by any agencies, vendors, or third-party services."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Projecto free to use?",
+          "name": "Is Projekto free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Core functionality is available for free. Some advanced features may be introduced in the future to support ongoing development and maintenance."
@@ -157,7 +157,7 @@ const articles = {
           <strong>Last updated: 01.01.2026</strong>
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          At Projecto, we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how information is collected, used, and safeguarded when you access or use our website and estimation tools.
+          At Projekto, we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how information is collected, used, and safeguarded when you access or use our website and estimation tools.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">1. Information We Collect</h2>
@@ -167,7 +167,7 @@ const articles = {
         
         <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">Information You Provide</h3>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>Data entered into the Projecto calculator (such as project type, features, estimated scope, timelines, or budgets)</li>
+          <li>Data entered into the Projekto calculator (such as project type, features, estimated scope, timelines, or budgets)</li>
           <li>Contact information if you voluntarily reach out to us (for example, via email)</li>
         </ul>
 
@@ -178,33 +178,33 @@ const articles = {
           <li>Pages visited, session duration, and interaction data</li>
         </ul>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          This information helps us understand how users interact with Projecto and improve the quality of our services.
+          This information helps us understand how users interact with Projekto and improve the quality of our services.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">2. Purpose of Data Processing</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto processes only the information that users voluntarily provide while using the service. This may include project-related details such as scope descriptions, technology stack selections, team roles, timelines, and cost estimates entered by the user.
+          Projekto processes only the information that users voluntarily provide while using the service. This may include project-related details such as scope descriptions, technology stack selections, team roles, timelines, and cost estimates entered by the user.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto does not require mandatory account creation, personal identification, or contact details in order to use the core functionality of the website.
+          Projekto does not require mandatory account creation, personal identification, or contact details in order to use the core functionality of the website.
         </p>
 
         <p className="text-jira-textSecondary leading-relaxed mb-2">
           We process information in order to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>Provide, maintain, and improve Projecto</li>
+          <li>Provide, maintain, and improve Projekto</li>
           <li>Analyze usage trends and optimize user experience</li>
           <li>Respond to inquiries and provide support</li>
           <li>Ensure platform security and prevent misuse</li>
         </ul>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto does not sell, rent, or trade personal data.
+          Projekto does not sell, rent, or trade personal data.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">3. Cookies and Tracking Technologies</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-2">
-          Projecto uses cookies and similar technologies to:
+          Projekto uses cookies and similar technologies to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
           <li>Enable essential website functionality</li>
@@ -282,12 +282,12 @@ const articles = {
           <strong>Last updated: 01.01.2026</strong>
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          These Terms of Service govern your access to and use of Projecto. By using the website, you agree to these Terms. If you do not agree, please discontinue use of the service.
+          These Terms of Service govern your access to and use of Projekto. By using the website, you agree to these Terms. If you do not agree, please discontinue use of the service.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">1. Service Overview</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto is an online tool designed to provide high-level estimates of development time and budget for web and mobile application projects.
+          Projekto is an online tool designed to provide high-level estimates of development time and budget for web and mobile application projects.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           All outputs are indicative estimates and are provided for informational purposes only.
@@ -295,7 +295,7 @@ const articles = {
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">2. No Professional Advice or Guarantees</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto does not provide legal, financial, or professional consulting services.
+          Projekto does not provide legal, financial, or professional consulting services.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-2">
           Estimates generated by the platform:
@@ -311,7 +311,7 @@ const articles = {
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">3. Acceptable Use</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-2">
-          By using Projecto, you agree to:
+          By using Projekto, you agree to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
           <li>Use the service only for lawful purposes</li>
@@ -321,7 +321,7 @@ const articles = {
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">4. Intellectual Property</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          All intellectual property associated with Projecto — including software logic, content, design elements, and branding — remains the exclusive property of Projecto unless otherwise stated.
+          All intellectual property associated with Projekto — including software logic, content, design elements, and branding — remains the exclusive property of Projekto unless otherwise stated.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           Unauthorized reproduction or redistribution is prohibited.
@@ -332,7 +332,7 @@ const articles = {
           To the fullest extent permitted by law:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
-          <li>Projecto shall not be liable for any direct, indirect, incidental, or consequential damages</li>
+          <li>Projekto shall not be liable for any direct, indirect, incidental, or consequential damages</li>
           <li>We are not responsible for decisions, losses, or outcomes resulting from reliance on calculator estimates</li>
           <li>Use of the service is at your own discretion and risk</li>
         </ul>
@@ -344,7 +344,7 @@ const articles = {
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">7. External Links</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Projecto may include links to third-party websites. We are not responsible for the content, policies, or practices of such external sites.
+          Projekto may include links to third-party websites. We are not responsible for the content, policies, or practices of such external sites.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">8. Governing Law</h2>
@@ -354,7 +354,7 @@ const articles = {
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">9. Changes to These Terms</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          We may revise these Terms periodically. Continued use of Projecto following any updates constitutes acceptance of the revised Terms.
+          We may revise these Terms periodically. Continued use of Projekto following any updates constitutes acceptance of the revised Terms.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">10. Contact Information</h2>
@@ -379,7 +379,7 @@ const articles = {
     content: (
       <div className="prose prose-lg max-w-none">
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          If you have questions about Projecto, the website, or how the service works, you can reach us using the contact information below.
+          If you have questions about Projekto, the website, or how the service works, you can reach us using the contact information below.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">We welcome inquiries related to:</h2>
@@ -407,7 +407,7 @@ const articles = {
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">About Communication</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Projecto is an independent online service focused on software project estimation and planning based on user-provided information.
+          Projekto is an independent online service focused on software project estimation and planning based on user-provided information.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
           We do not offer customer support via social media and do not provide phone support at this time.
@@ -691,9 +691,9 @@ const articles = {
           This approach mirrors how experienced agencies and product teams plan projects internally.
         </p>
 
-        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">How Projecto Calculates Project Cost</h2>
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">How Projekto Calculates Project Cost</h2>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          <Link href="/" className="text-jira-blue hover:underline">Projecto</Link> follows industry-standard estimation principles:
+          <Link href="/" className="text-jira-blue hover:underline">Projekto</Link> follows industry-standard estimation principles:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
           <li><strong>Role-based effort modeling:</strong> Each role contributes time based on selected features and scope.</li>
@@ -887,19 +887,19 @@ const articles = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://projecto-calculator.com"
+          "item": "https://Projekto-calculator.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://projecto-calculator.com/blog"
+          "item": "https://Projekto-calculator.com/blog"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Project Cost Calculation",
-          "item": "https://projecto-calculator.com/blog/project-cost-calculation"
+          "item": "https://Projekto-calculator.com/blog/project-cost-calculation"
         }
       ]
     }

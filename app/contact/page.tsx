@@ -38,7 +38,7 @@ export default function ContactPage() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-jira-textSecondary leading-relaxed mb-6">
-              If you have questions about Projecto, the website, or how the service works, you can reach us using the contact information below.
+              If you have questions about Projekto, the website, or how the service works, you can reach us using the contact information below.
             </p>
 
             <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">We welcome inquiries related to:</h2>
@@ -66,7 +66,7 @@ export default function ContactPage() {
 
             <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">About Communication</h2>
             <p className="text-jira-textSecondary leading-relaxed mb-4">
-              Projecto is an independent online service focused on software project estimation and planning based on user-provided information.
+              Projekto is an independent online service focused on software project estimation and planning based on user-provided information.
             </p>
             <p className="text-jira-textSecondary leading-relaxed mb-4">
               We do not offer customer support via social media and do not provide phone support at this time.

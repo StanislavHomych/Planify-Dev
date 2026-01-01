@@ -8,25 +8,25 @@ const articles = [
     slug: 'about-us',
     title: 'About Us',
     date: '29/12/2025',
-    excerpt: 'Learn about Projecto, an independent online service designed to help teams and businesses estimate software projects more clearly and efficiently.'
+    excerpt: 'Learn about Projekto, an independent online service designed to help teams and businesses estimate software projects more clearly and efficiently.'
   },
   {
     slug: 'privacy-policy',
     title: 'Privacy Policy',
     date: '29/12/2025',
-    excerpt: 'Projecto respects user privacy and is committed to protecting personal and project-related data.'
+    excerpt: 'Projekto respects user privacy and is committed to protecting personal and project-related data.'
   },
   {
     slug: 'terms-of-service',
     title: 'Terms of Service',
     date: '29/12/2025',
-    excerpt: 'By using Projecto, you agree to the following terms regarding the use of our estimation and planning tool.'
+    excerpt: 'By using Projekto, you agree to the following terms regarding the use of our estimation and planning tool.'
   },
   {
     slug: 'contact-us',
     title: 'Contact Us',
     date: '29/12/2025',
-    excerpt: 'If you have questions about Projecto, the website, or how the service works, you can reach us using the contact information below.'
+    excerpt: 'If you have questions about Projekto, the website, or how the service works, you can reach us using the contact information below.'
   },
   {
     slug: 'project-cost-calculation',
