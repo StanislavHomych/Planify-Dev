@@ -2,35 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/</loc>
+    <loc>https://projecto-calculator.com/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/calculator</loc>
+    <loc>https://projecto-calculator.com/calculator</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/blog</loc>
+    <loc>https://projecto-calculator.com/blog</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/contact</loc>
+    <loc>https://projecto-calculator.com/contact</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/blog/about-us</loc>
+    <loc>https://projecto-calculator.com/blog/about-us</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/blog/privacy-policy</loc>
+    <loc>https://projecto-calculator.com/blog/privacy-policy</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/blog/terms-of-service</loc>
+    <loc>https://projecto-calculator.com/blog/terms-of-service</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://planify-dev-ivory.vercel.app/blog/contact-us</loc>
+    <loc>https://projecto-calculator.com/blog/contact-us</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://projecto-calculator.com/blog/project-cost-calculation</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

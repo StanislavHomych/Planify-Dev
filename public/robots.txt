@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://planify-dev-ivory.vercel.app/sitemap.xml
+Sitemap: https://projecto-calculator.com/sitemap.xml
 

@@ -2,39 +2,7 @@
 
 import Link from 'next/link';
 import * as Fi from 'react-icons/fi';
-
-const articles = [
-  {
-    slug: 'about-us',
-    title: 'About Us',
-    date: '29/12/2025',
-    excerpt: 'Learn about Projekto, an independent online service designed to help teams and businesses estimate software projects more clearly and efficiently.'
-  },
-  {
-    slug: 'privacy-policy',
-    title: 'Privacy Policy',
-    date: '29/12/2025',
-    excerpt: 'Projekto respects user privacy and is committed to protecting personal and project-related data.'
-  },
-  {
-    slug: 'terms-of-service',
-    title: 'Terms of Service',
-    date: '29/12/2025',
-    excerpt: 'By using Projekto, you agree to the following terms regarding the use of our estimation and planning tool.'
-  },
-  {
-    slug: 'contact-us',
-    title: 'Contact Us',
-    date: '29/12/2025',
-    excerpt: 'If you have questions about Projekto, the website, or how the service works, you can reach us using the contact information below.'
-  },
-  {
-    slug: 'project-cost-calculation',
-    title: 'How to Calculate Project Cost: A Complete Guide',
-    date: '01/01/2026',
-    excerpt: 'Learn how to calculate project cost realistically, what factors influence software development cost, and how modern estimation tools help teams plan with confidence.'
-  }
-];
+import { articles } from '@/data/articles';
 
 export default function BlogPage() {
   return (
