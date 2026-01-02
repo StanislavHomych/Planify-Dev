@@ -41,6 +41,12 @@ export const articles: Article[] = [
     title: 'Software Development Cost Explained: What You Really Pay For',
     date: '01/01/2026',
     excerpt: 'Understand software development cost in detail. Learn what drives pricing, from team roles and features to testing, tech stack, and support.'
+  },
+  {
+    slug: 'cost-for-application-development',
+    title: 'Cost for Application Development: Web vs Mobile Explained',
+    date: '01/01/2026',
+    excerpt: 'Compare the cost for application development across web and mobile apps. Learn what drives pricing, timelines, and feature complexity.'
   }
 ];
 
