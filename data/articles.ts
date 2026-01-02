@@ -35,6 +35,12 @@ export const articles: Article[] = [
     title: 'How to Calculate Project Cost: A Complete Guide',
     date: '01/01/2026',
     excerpt: 'Learn how to calculate project cost realistically, what factors influence software development cost, and how modern estimation tools help teams plan with confidence.'
+  },
+  {
+    slug: 'software-development-cost',
+    title: 'Software Development Cost Explained: What You Really Pay For',
+    date: '01/01/2026',
+    excerpt: 'Understand software development cost in detail. Learn what drives pricing, from team roles and features to testing, tech stack, and support.'
   }
 ];
 
