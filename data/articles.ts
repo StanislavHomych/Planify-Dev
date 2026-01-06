@@ -47,6 +47,30 @@ export const articles: Article[] = [
     title: 'Cost for Application Development: Web vs Mobile Explained',
     date: '01/01/2026',
     excerpt: 'Compare the cost for application development across web and mobile apps. Learn what drives pricing, timelines, and feature complexity.'
+  },
+  {
+    slug: 'estimate-software-development-cost',
+    title: 'Estimate Software Development Cost Accurately: Step-by-Step Guide',
+    date: '01/01/2026',
+    excerpt: 'Learn how to estimate software development cost accurately. Step-by-step process covering scope, roles, features, tech stack, QA, and buffers.'
+  },
+  {
+    slug: 'app-cost-calculator',
+    title: 'App Cost Calculator: How Accurate Are Online Tools?',
+    date: '01/01/2026',
+    excerpt: 'Learn how app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.'
+  },
+  {
+    slug: 'website-cost-calculator',
+    title: 'Website Cost Calculator: What Influences Website Pricing the Most',
+    date: '01/01/2026',
+    excerpt: 'Learn what influences website pricing the most and how a website cost calculator estimates design, development, testing, and maintenance costs.'
+  },
+  {
+    slug: 'saas',
+    title: 'Software Development Cost for SaaS Projects (2026 Guide)',
+    date: '01/01/2026',
+    excerpt: 'Understand SaaS software development cost, pricing ranges, key cost drivers, and how to estimate your SaaS project budget accurately.'
   }
 ];
 

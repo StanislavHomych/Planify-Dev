@@ -80,25 +80,25 @@ export default function ContactPage() {
 
       {/* Footer */}
       <footer className="bg-white border-t border-jira-border mt-20">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="container mx-auto px-4 py-12 sm:py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
             {/* Brand Section */}
-            <div className="md:col-span-1">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-jira-blue rounded flex items-center justify-center">
                   <Fi.FiGrid className="text-2xl text-white" />
                 </div>
                 <span className="text-2xl font-bold text-jira-darkBlue">Projekto</span>
               </div>
-              <p className="text-sm text-jira-textSecondary">
-                {/* Description will be added later */}
+              <p className="text-sm text-jira-textSecondary leading-relaxed max-w-xs">
+                Professional software project cost estimation and planning tool.
               </p>
             </div>
 
             {/* Navigation Columns */}
             <div>
-              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">PRODUCT</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">Navigation</h3>
+              <ul className="space-y-3 text-sm">
                 <li>
                   <Link href="/" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
                     Home
@@ -109,12 +109,22 @@ export default function ContactPage() {
                     Calculator
                   </Link>
                 </li>
+                <li>
+                  <Link href="/blog" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">LEGAL</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">Legal</h3>
+              <ul className="space-y-3 text-sm">
                 <li>
                   <Link href="/blog/privacy-policy" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
                     Privacy Policy
@@ -128,15 +138,44 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">RESOURCES</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/blog" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                    Blog
-                  </Link>
-                </li>
-              </ul>
+            <div className="sm:col-span-2 lg:col-span-1">
+              <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">Cost Estimation Guides</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-6 gap-y-3">
+                <ul className="space-y-3 text-sm">
+                  <li>
+                    <Link href="/blog/project-cost-calculation" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Project Cost Calculation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog/software-development-cost" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Software Development Cost
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog/cost-for-application-development" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Application Development Cost
+                    </Link>
+                  </li>
+                </ul>
+                <ul className="space-y-3 text-sm">
+                  <li>
+                    <Link href="/blog/estimate-software-development-cost" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Estimate Development Cost
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog/app-cost-calculator" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      App Cost Calculator
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog/website-cost-calculator" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Website Cost Calculator
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 

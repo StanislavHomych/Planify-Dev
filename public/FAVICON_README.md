@@ -25,3 +25,4 @@ To add your logo as favicon, place your icon files in the `/public` folder:
 
 You can also place an `icon.png`, `icon.ico`, or `icon.svg` file directly in the `/app` directory, and Next.js will automatically use it as the favicon.
 
+
