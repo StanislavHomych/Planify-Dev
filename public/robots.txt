@@ -3,3 +3,17 @@ Allow: /
 
 Sitemap: https://projecto-calculator.com/sitemap.xml
 
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
