@@ -7,10 +7,8 @@ export interface ProjectTemplate {
   description: string;
   team: Omit<TeamMember, 'id'>[];
   design: DesignConfig;
-  features: string[]; // Feature IDs
+  features: string[];
 }
-
-// Note: days field removed from TeamMember - now calculated automatically based on features
 
 export const PROJECT_TEMPLATES: ProjectTemplate[] = [
   {

@@ -31,7 +31,6 @@ export default function Step6Additional() {
         </div>
       </div>
 
-      {/* Support */}
       <div className="card">
         <label className="label text-xs">Post-launch Support</label>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 mt-2">
@@ -55,7 +54,6 @@ export default function Step6Additional() {
         </p>
       </div>
 
-      {/* Documentation */}
       <div className="card">
         <div className="flex items-center space-x-2 mb-3">
           <FiFileText className="text-lg text-jira-textSecondary" />
@@ -108,7 +106,6 @@ export default function Step6Additional() {
         </div>
       </div>
 
-      {/* Buffer */}
       <div className="card">
         <div className="flex items-center space-x-2 mb-2">
           <FiSliders className="text-lg text-jira-textSecondary" />
@@ -133,7 +130,6 @@ export default function Step6Additional() {
         </p>
       </div>
 
-      {/* Other Costs */}
       <div className="card">
         <div className="flex items-center space-x-2 mb-3">
           <FiPackage className="text-lg text-jira-textSecondary" />

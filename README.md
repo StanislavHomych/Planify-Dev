@@ -1,19 +1,19 @@
-# 💰 Projekto - Калькулятор вартості розробки
+# Projekto - Development Cost Calculator
 
-Професійний веб-додаток для оцінки вартості та часу розробки веб та мобільних проектів.
+Professional web application for estimating cost and time for web and mobile project development.
 
-## 🚀 Особливості
+## Features
 
-- **Детальна оцінка команди**: Додавайте членів команди з різними ролями, рівнями та ставками
-- **Дизайн та макети**: Оцінка складності дизайну та додаткових послуг
-- **Функціональність**: Вибір функцій з реалістичними оцінками часу розробки
-- **Технологічний стек**: Урахування множників для різних технологій
-- **Тестування**: Мануальне та автоматизоване тестування
-- **Додаткові витрати**: Підтримка, документація, буфери
-- **Детальний breakdown**: Повний розклад витрат за ролями та функціями
-- **Експорт результатів**: Збереження та експорт розрахунків
+- **Team estimation**: Add team members with different roles, levels, and rates
+- **Design and mockups**: Estimate design complexity and additional services
+- **Features**: Select features with realistic development time estimates
+- **Tech stack**: Account for multipliers for different technologies
+- **Testing**: Manual and automated testing
+- **Additional costs**: Support, documentation, buffers
+- **Detailed breakdown**: Complete cost breakdown by roles and features
+- **Export results**: Save and export calculations
 
-## 🛠 Технології
+## Technologies
 
 - **Next.js 14** - React framework
 - **TypeScript** - Type safety
@@ -21,86 +21,85 @@
 - **Zustand** - State management
 - **React Icons** - Icons
 
-## 📦 Встановлення
+## Installation
 
-1. Встановіть залежності:
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Запустіть dev сервер:
+2. Run dev server:
 ```bash
 npm run dev
 ```
 
-3. Відкрийте браузер на [http://localhost:3000](http://localhost:3000)
+3. Open browser at [http://localhost:3000](http://localhost:3000)
 
-## 📖 Використання
+## Usage
 
-### Крок 1: Команда
-Додайте членів команди з їхніми ролями, рівнями та погодинними ставками. **Калькулятор автоматично розрахує необхідний час роботи** на основі вибраних функцій.
+### Step 1: Team
+Add team members with their roles, levels, and hourly rates. The calculator automatically calculates required work time based on selected features.
 
-### Крок 2: Дизайн
-Оберіть складність дизайну, кількість екранів та додаткові послуги.
+### Step 2: Design
+Select design complexity, number of screens, and additional services.
 
-### Крок 3: Функції
-Виберіть необхідні функції для вашого проекту з реалістичними оцінками.
+### Step 3: Features
+Select required features for your project with realistic estimates.
 
-### Крок 4: Технології
-Оберіть технологічний стек (frontend, backend, база даних).
+### Step 4: Technologies
+Select technology stack (frontend, backend, database).
 
-### Крок 5: Тестування
-Налаштуйте мануальне та автоматизоване тестування.
+### Step 5: Testing
+Configure manual and automated testing.
 
-### Крок 6: Додатково
-Вкажіть підтримку, документацію та буфери.
+### Step 6: Additional
+Specify support, documentation, and buffers.
 
-### Крок 7: Результат
-Переглядайте детальний breakdown та експортуйте результати.
+### Step 7: Results
+View detailed breakdown and export results.
 
-## 🎯 MVP Функціонал
+## MVP Features
 
-### ✅ Реалізовано
-- Форми для команди з різними ролями
-- Налаштування дизайну
-- Вибір функцій з оцінками часу
-- Вибір технологічного стеку
-- Тестування та QA
-- Додаткові витрати
-- Детальний розрахунок з breakdown
-- Збереження стану в localStorage
-- Responsive дизайн
+### Implemented
+- Team forms with different roles
+- Design configuration
+- Feature selection with time estimates
+- Technology stack selection
+- Testing and QA
+- Additional costs
+- Detailed calculation with breakdown
+- State persistence in localStorage
+- Responsive design
 
-### 🔜 Планується
-- Експорт в PDF
-- Шаблони проектів (E-commerce, SaaS, тощо)
-- Порівняння різних сценаріїв
-- Backend API для збереження розрахунків
-- Історія розрахунків
-- Email надсилання результатів
+### Planned
+- PDF export
+- Project templates (E-commerce, SaaS, etc.)
+- Comparison of different scenarios
+- Backend API for saving calculations
+- Calculation history
+- Email sending of results
 
-## 📊 Приклад розрахунку
+## Example Calculation
 
-Типовий веб-додаток з:
-- 2 розробники (Frontend + Backend) @ $50/год
-- 1 дизайнер @ $40/год
-- 10-15 функцій (auth, профіль, пошук, dashboard тощо)
-- Мануальне тестування (20%)
-- 3 місяці підтримки
+Typical web application with:
+- 2 developers (Frontend + Backend) @ $50/hr
+- 1 designer @ $40/hr
+- 10-15 features (auth, profile, search, dashboard, etc.)
+- Manual testing (20%)
+- 3 months support
 
-**Результат**: ~$35,000 - $50,000, 2-4 місяці розробки
+**Result**: ~$35,000 - $50,000, 2-4 months development
 
-💡 **Калькулятор автоматично розраховує** скільки часу та грошей потрібно на основі вибраних функцій!
+The calculator automatically calculates how much time and money is needed based on selected features!
 
-## 🤝 Внесок
+## Contributing
 
-Якщо ви знайшли баг або маєте ідеї для покращення, створіть issue або pull request.
+If you found a bug or have ideas for improvement, create an issue or pull request.
 
-## 📄 Ліцензія
+## License
 
 MIT License
 
 ---
 
-Створено з ❤️ для айті-спільноти
-
+Created for the IT community

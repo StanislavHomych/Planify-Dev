@@ -128,7 +128,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Help Button */}
       <div className="card bg-primary-50 border border-jira-blue">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="flex items-start sm:items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
@@ -149,7 +148,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Compatibility Indicator */}
       {compatNote && (
         <div className={`card flex items-start sm:items-center space-x-2 sm:space-x-3 ${
           compatNote.type === 'excellent' ? 'bg-green-50 border border-jira-success' :
@@ -173,7 +171,6 @@ export default function Step4TechStack() {
         </div>
       )}
 
-      {/* Frontend Framework */}
       <div className="card">
         <label className="label text-xs">Frontend Framework</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
@@ -194,7 +191,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Backend Stack */}
       <div className="card">
         <label className="label text-xs">Backend Stack</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
@@ -215,7 +211,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Database */}
       <div className="card">
         <label className="label text-xs">Database</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
@@ -236,7 +231,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Mobile Platform */}
       <div className="card">
         <label className="label text-xs">Mobile Platform (Optional)</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
@@ -264,7 +258,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* UI Library */}
       <div className="card">
         <label className="label text-xs">UI Library/Framework</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
@@ -294,7 +287,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Hosting Platform */}
       <div className="card">
         <label className="label text-xs">Hosting Platform</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
@@ -324,7 +316,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* DevOps & Infrastructure */}
       <div className="card">
         <label className="label text-xs">DevOps & Infrastructure</label>
         <div className="space-y-1.5 mt-2">
@@ -395,7 +386,6 @@ export default function Step4TechStack() {
         </div>
       </div>
 
-      {/* Recommendations Modal */}
       {showRecommendations && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4 overflow-y-auto">
           <div className="bg-white rounded shadow-jira-lg max-w-4xl w-full p-4 sm:p-6 my-4 sm:my-8 max-h-[90vh] overflow-y-auto">

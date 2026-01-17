@@ -1,6 +1,5 @@
 import { Feature } from '@/types/calculator';
 
-// Feature categories
 export const FEATURE_CATEGORIES = {
   AUTH: 'Authentication & Security',
   PROFILE: 'User Profile',
@@ -13,7 +12,6 @@ export const FEATURE_CATEGORIES = {
   OTHER: 'Other',
 };
 
-// All available features
 export const AVAILABLE_FEATURES: Feature[] = [
   // Authentication
   {
@@ -215,7 +213,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
   
-  // More Communication Features
   {
     id: 'video-calls',
     name: 'Video/Audio Calls (WebRTC)',
@@ -233,7 +230,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
   
-  // More Payment Features
   {
     id: 'crypto-payments',
     name: 'Cryptocurrency Payments',
@@ -259,7 +255,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
 
-  // More Data Features
   {
     id: 'advanced-search',
     name: 'Advanced Search (Elasticsearch)',
@@ -293,7 +288,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
 
-  // More Analytics Features
   {
     id: 'real-time-analytics',
     name: 'Real-time Analytics Dashboard',
@@ -319,7 +313,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
 
-  // More Media Features
   {
     id: 'image-processing',
     name: 'Image Processing & Optimization',
@@ -345,7 +338,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
 
-  // More Admin Features
   {
     id: 'audit-logs',
     name: 'Audit Logs & Activity Tracking',
@@ -371,7 +363,6 @@ export const AVAILABLE_FEATURES: Feature[] = [
     selected: false,
   },
   
-  // Other
   {
     id: 'multi-language',
     name: 'Multi-language (i18n)',

@@ -34,7 +34,6 @@ export default function Step2Design() {
         </div>
       </div>
 
-      {/* Design Complexity */}
       <div className="card">
         <label className="label text-xs">Design Complexity</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
@@ -61,7 +60,6 @@ export default function Step2Design() {
         </div>
       </div>
 
-      {/* Screens Count */}
       <div className="card">
         <label className="label text-xs">Number of Screens/Pages</label>
         <input
@@ -77,11 +75,9 @@ export default function Step2Design() {
         </p>
       </div>
 
-      {/* Additional Design Services */}
       <div className="card">
         <label className="label text-xs">Additional Services</label>
         <div className="space-y-3 mt-2">
-          {/* Logo and Branding */}
           <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
             <label className="flex items-center space-x-3 cursor-pointer">
               <input
@@ -118,7 +114,6 @@ export default function Step2Design() {
             )}
           </div>
 
-          {/* Icons and Illustrations */}
           <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
             <label className="flex items-center space-x-3 cursor-pointer">
               <input
@@ -155,7 +150,6 @@ export default function Step2Design() {
             )}
           </div>
 
-          {/* Animations and Micro-interactions */}
           <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
             <label className="flex items-center space-x-3 cursor-pointer">
               <input
@@ -192,7 +186,6 @@ export default function Step2Design() {
             )}
           </div>
 
-          {/* 3D Graphics */}
           <div className="p-3 hover:bg-gray-50 rounded transition-colors border border-transparent hover:border-jira-border">
             <label className="flex items-center space-x-3 cursor-pointer">
               <input
@@ -231,7 +224,6 @@ export default function Step2Design() {
         </div>
       </div>
 
-      {/* Responsive Design */}
       <div className="card">
         <label className="label text-xs">Responsive Design</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">

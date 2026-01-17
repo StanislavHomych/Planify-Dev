@@ -22,7 +22,6 @@ export default function Step5Testing() {
         </div>
       </div>
 
-      {/* Manual Testing */}
       <div className="card">
         <label className="flex items-center space-x-3 cursor-pointer">
           <input
@@ -65,7 +64,6 @@ export default function Step5Testing() {
         )}
       </div>
 
-      {/* Automated Testing */}
       <div className="card">
         <label className="flex items-center space-x-3 cursor-pointer">
           <input
@@ -97,7 +95,6 @@ export default function Step5Testing() {
               Typical: 40-80 hours for basic coverage
             </p>
 
-            {/* Test Types */}
             <div className="mt-4 space-y-2">
               <label className="flex items-center space-x-2 text-xs cursor-pointer">
                 <input
@@ -143,7 +140,6 @@ export default function Step5Testing() {
         )}
       </div>
 
-      {/* Info Box */}
       <div className="card bg-primary-50 border border-jira-blue">
         <div className="flex items-start space-x-3">
           <FiInfo className="text-lg text-jira-blue flex-shrink-0 mt-0.5" />

@@ -166,11 +166,9 @@ export const useCalculatorStore = create<CalculatorStore>()(
         const roundHours = (hours: number): number => Math.round(hours * 10) / 10;
         const roundMoney = (money: number): number => Math.round(money * 100) / 100;
 
-        // 1. Design hours calculation
         const designHoursPerScreen = DESIGN_HOURS_PER_SCREEN[design.complexity];
         let designHours = design.screensCount * ((designHoursPerScreen.min + designHoursPerScreen.max) / 2);
 
-        // Additional hours for extra services (use custom hours if provided, otherwise default values)
         const defaultLogoHours = 36;
         const defaultIconsHours = 54;
         const defaultAnimationsHours = 70;
@@ -194,13 +192,10 @@ export const useCalculatorStore = create<CalculatorStore>()(
         designHours *= responsiveCount > 1 ? 1 + (responsiveCount - 1) * 0.2 : 1;
         designHours = roundHours(designHours);
 
-        // 2. Base page development hours (basic page structure, routing, API setup)
-        // This is separate from features - it's the foundation work for each page
         const frontendMultiplier = TECH_MULTIPLIERS.frontend[techStack.frontend];
         const backendMultiplier = TECH_MULTIPLIERS.backend[techStack.backend];
         const dbMultiplier = TECH_MULTIPLIERS.database[techStack.database];
 
-        // Base hours per page: frontend (components, routing, basic UI) + backend (API endpoints, CRUD)
         const baseFrontendHoursPerPage = {
           simple: 4,
           medium: 6,
@@ -213,16 +208,13 @@ export const useCalculatorStore = create<CalculatorStore>()(
           complex: 4,
         }[design.complexity] || 3;
 
-        // Calculate base page development hours
         let baseFrontendHours = roundHours(design.screensCount * baseFrontendHoursPerPage * frontendMultiplier);
         let baseBackendHours = roundHours(design.screensCount * baseBackendHoursPerPage * backendMultiplier * dbMultiplier);
 
-        // Responsive multiplier for frontend (more screens = more responsive work)
         if (responsiveCount > 1) {
           baseFrontendHours = roundHours(baseFrontendHours * (1 + (responsiveCount - 1) * 0.15));
         }
 
-        // 3. Features hours calculation
         const selectedFeatures = features.filter((f) => f.selected);
 
         let totalFrontendHours = baseFrontendHours;
@@ -245,7 +237,6 @@ export const useCalculatorStore = create<CalculatorStore>()(
           totalFrontendHours += frontendHours;
           totalBackendHours += backendHours;
 
-          // Calculate feature cost for display only (using average rates)
           const avgFrontendRate = team.find(m => m.role === 'frontend-developer' || m.role === 'fullstack-developer')?.hourlyRate || 50;
           const avgBackendRate = team.find(m => m.role === 'backend-developer' || m.role === 'fullstack-developer')?.hourlyRate || 50;
           const cost = roundMoney(frontendHours * avgFrontendRate + backendHours * avgBackendRate);
@@ -260,7 +251,6 @@ export const useCalculatorStore = create<CalculatorStore>()(
           };
         });
 
-        // Add base page development as a "feature" for display purposes
         if (design.screensCount > 0) {
           const avgFrontendRate = team.find(m => m.role === 'frontend-developer' || m.role === 'fullstack-developer')?.hourlyRate || 50;
           const avgBackendRate = team.find(m => m.role === 'backend-developer' || m.role === 'fullstack-developer')?.hourlyRate || 50;
@@ -276,7 +266,6 @@ export const useCalculatorStore = create<CalculatorStore>()(
           });
         }
 
-        // 4. Testing hours calculation
         let testingHours = 0;
         if (testing.manualTesting) {
           testingHours += (totalFrontendHours + totalBackendHours) * (testing.manualTestingPercent / 100);
@@ -286,19 +275,15 @@ export const useCalculatorStore = create<CalculatorStore>()(
         }
         testingHours = roundHours(testingHours);
 
-        // 5. Calculate total development hours (without PM/DevOps overhead)
         const totalDevHours = designHours + totalFrontendHours + totalBackendHours + testingHours;
 
-        // 6. PM and DevOps overhead (calculated separately, not part of dev hours)
-        const pmHours = roundHours(totalDevHours * 0.2); // 20% overhead
-        const devopsHours = roundHours(totalDevHours * 0.15); // 15% overhead
+        const pmHours = roundHours(totalDevHours * 0.2);
+        const devopsHours = roundHours(totalDevHours * 0.15);
 
-        // 7. Distribute hours among team members by their roles
         const teamCosts: RoleCostBreakdown[] = team.map((member) => {
           let memberHours = 0;
 
-          if (member.isCustomRole) {
-            // Custom roles: distribute remaining hours proportionally
+            if (member.isCustomRole) {
             const customRoleMembers = team.filter(m => m.isCustomRole);
             const standardRoleMembers = team.filter(m => !m.isCustomRole);
 
@@ -338,7 +323,6 @@ export const useCalculatorStore = create<CalculatorStore>()(
               }
             });
 
-            // Distribute remaining hours among custom roles
             const remainingHours = totalDevHours + pmHours + devopsHours - allocatedHours;
             if (remainingHours > 0 && customRoleMembers.length > 0) {
               memberHours = remainingHours / customRoleMembers.length;
@@ -371,7 +355,6 @@ export const useCalculatorStore = create<CalculatorStore>()(
             } else if (member.role === 'devops-engineer') {
               memberHours = devopsHours;
             } else {
-              // Other roles (content-manager, etc.) - minimal hours
               memberHours = roundHours((totalDevHours * 0.05) / team.filter(m => 
                 m.role === member.role && !m.isCustomRole
               ).length);
@@ -392,25 +375,20 @@ export const useCalculatorStore = create<CalculatorStore>()(
           };
         });
 
-        // 7. Calculate costs
         const totalTeamCost = roundMoney(teamCosts.reduce((sum, t) => sum + t.cost, 0));
 
-        // Design cost (for display - already included in team costs)
         const designer = team.find((m) => m.role === 'ui-ux-designer');
         const designCost = roundMoney(designer ? designHours * designer.hourlyRate : designHours * 40);
 
-        // Testing cost (for display - already included in team costs)
         const qaEngineer = team.find((m) => m.role === 'qa-engineer');
         const testingCost = roundMoney(qaEngineer ? testingHours * qaEngineer.hourlyRate : testingHours * 35);
 
-        // 8. Infrastructure costs
         let infrastructureCost = 0;
         if (techStack.cloud) infrastructureCost += roundMoney(totalTeamCost * 0.1);
         if (techStack.cdn) infrastructureCost += 500;
         if (techStack.cicd) infrastructureCost += 1000;
         infrastructureCost = roundMoney(infrastructureCost);
 
-        // 9. Support cost
         const supportPercentage = {
           0: 0,
           1: 0.15,
@@ -422,7 +400,6 @@ export const useCalculatorStore = create<CalculatorStore>()(
         const baseCost = roundMoney(totalTeamCost + infrastructureCost);
         const supportCost = roundMoney(baseCost * supportPercentage);
 
-        // 10. Documentation cost
         const avgDevRate = team.length > 0 
           ? team.reduce((sum, m) => sum + m.hourlyRate, 0) / team.length 
           : 50;
@@ -431,20 +408,16 @@ export const useCalculatorStore = create<CalculatorStore>()(
         if (additional.documentation.userGuide) documentationCost += 15 * avgDevRate;
         documentationCost = roundMoney(documentationCost);
 
-        // 11. Other costs
         let otherCosts = roundMoney(infrastructureCost + documentationCost);
         if (additional.other.domain) otherCosts = roundMoney(otherCosts + 300);
         if (additional.other.apis) otherCosts = roundMoney(otherCosts + 500);
         if (additional.other.licenses) otherCosts = roundMoney(otherCosts + 1000);
 
-        // 12. Buffer
         const subtotal = roundMoney(baseCost + supportCost + otherCosts);
         const bufferCost = roundMoney((subtotal * additional.bufferPercent) / 100);
 
-        // 13. Total cost
         const totalCost = roundMoney(subtotal + bufferCost);
 
-        // 14. Calculate total time
         const totalHours = roundHours(designHours + totalFrontendHours + totalBackendHours + testingHours + pmHours + devopsHours);
         const teamProductivityPerDay = team.reduce((sum, m) => sum + m.hoursPerDay * m.quantity, 0);
         const estimatedDays = teamProductivityPerDay > 0 

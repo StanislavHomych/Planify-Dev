@@ -41,9 +41,7 @@ export default function ProjectTypeSelector({ onSkip }: Props) {
       database: stack.database,
     });
 
-    // Add suggested team members based on project type
     if (typeId === 'landing') {
-      // Simple landing: Designer + Frontend
       const designer: TeamMember = {
         id: `member-${Date.now()}`,
         role: 'ui-ux-designer',
@@ -63,7 +61,6 @@ export default function ProjectTypeSelector({ onSkip }: Props) {
       addTeamMember(designer);
       setTimeout(() => addTeamMember(frontend), 10);
     } else if (typeId === 'saas' || typeId === 'ecommerce' || typeId === 'enterprise') {
-      // Complex projects: Full team
       const designer: TeamMember = {
         id: `member-${Date.now()}`,
         role: 'ui-ux-designer',
@@ -101,7 +98,6 @@ export default function ProjectTypeSelector({ onSkip }: Props) {
       setTimeout(() => addTeamMember(backend), 20);
       setTimeout(() => addTeamMember(qa), 30);
     } else {
-      // Medium projects: Designer + Frontend + Backend
       const designer: TeamMember = {
         id: `member-${Date.now()}`,
         role: 'ui-ux-designer',

@@ -92,7 +92,6 @@ export default function CalculatorPage() {
 
   return (
     <div className="min-h-screen bg-jira-background">
-      {/* Header */}
       <header className="bg-white border-b border-jira-border sticky top-0 z-50">
         <div className="container mx-auto px-3 sm:px-4 py-2">
           <div className="flex items-center justify-between gap-2">
@@ -117,7 +116,6 @@ export default function CalculatorPage() {
         </div>
       </header>
 
-      {/* Steps Navigation */}
       {!showProjectTypeSelector && (
       <div className="bg-white border-b border-jira-border overflow-x-auto">
         <div className="container mx-auto px-2 sm:px-4">
@@ -153,7 +151,6 @@ export default function CalculatorPage() {
       </div>
       )}
 
-      {/* Main Content */}
       <main className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         {!showProjectTypeSelector && currentStep === 0 && team.length === 0 && (
           <div className="card bg-primary-50 border border-jira-blue mb-3 sm:mb-4">
@@ -185,7 +182,6 @@ export default function CalculatorPage() {
           )}
         </div>
 
-        {/* Navigation Buttons */}
         {!showProjectTypeSelector && (
           <>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between mt-4 max-w-5xl mx-auto gap-2 sm:gap-3">
@@ -223,7 +219,6 @@ export default function CalculatorPage() {
               )}
             </div>
 
-            {/* Validation Message */}
             {currentStep === 0 && team.length === 0 && (
               <div className="text-center mt-4 text-jira-warning font-medium text-sm">
                 Add at least one team member to continue
@@ -233,7 +228,6 @@ export default function CalculatorPage() {
         )}
       </main>
 
-      {/* Reset Confirmation Modal */}
       {showResetConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded shadow-jira-lg max-w-md w-full p-4 sm:p-6">
@@ -259,11 +253,9 @@ export default function CalculatorPage() {
         </div>
       )}
 
-      {/* Footer */}
       <footer className="bg-white border-t border-jira-border mt-12 sm:mt-20">
         <div className="container mx-auto px-4 py-8 sm:py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
-            {/* Brand Section */}
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-jira-blue rounded flex items-center justify-center">
@@ -276,7 +268,6 @@ export default function CalculatorPage() {
               </p>
             </div>
 
-            {/* Navigation Columns */}
             <div>
               <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">Navigation</h3>
               <ul className="space-y-3 text-sm">
@@ -360,10 +351,8 @@ export default function CalculatorPage() {
             </div>
           </div>
 
-          {/* Separator */}
           <div className="border-t border-jira-border my-8"></div>
 
-          {/* Bottom Section */}
           <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-jira-textSecondary gap-3 sm:gap-0">
             <div>
               <p>© 2025 Projekto. All rights reserved.</p>

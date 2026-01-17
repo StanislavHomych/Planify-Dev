@@ -69,7 +69,6 @@ export default function Step7Summary() {
         </div>
       </div>
 
-      {/* Main Summary Card */}
       <div className="card bg-jira-blue text-white shadow-jira-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div>
@@ -95,7 +94,6 @@ export default function Step7Summary() {
           </div>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-wrap gap-3 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-primary-500">
           <button onClick={handleExportPDF} className="bg-white text-jira-blue px-4 sm:px-5 py-2 sm:py-2.5 rounded font-medium hover:bg-gray-50 transition-all shadow-jira flex items-center justify-center space-x-2 w-full sm:w-auto text-sm sm:text-base">
             <FiDownload />
@@ -104,7 +102,6 @@ export default function Step7Summary() {
         </div>
       </div>
 
-      {/* Cost Breakdown by Team */}
       <div className="card">
         <div className="flex items-center space-x-2 mb-4">
           <FiUsers className="text-lg text-jira-textSecondary" />
@@ -136,7 +133,6 @@ export default function Step7Summary() {
         </div>
       </div>
 
-      {/* Cost Breakdown by Features */}
       {summary.featureCosts.length > 0 && (
         <div className="card">
           <div className="flex items-center space-x-2 mb-4">
@@ -181,7 +177,6 @@ export default function Step7Summary() {
         </div>
       )}
 
-      {/* Additional Costs Breakdown */}
       <div className="card">
         <div className="flex items-center space-x-2 mb-4">
           <FiDollarSign className="text-lg text-jira-textSecondary" />
@@ -215,7 +210,6 @@ export default function Step7Summary() {
         </div>
       </div>
 
-      {/* Final Total */}
       <div className="card bg-jira-darkBlue text-white shadow-jira-md">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
@@ -231,7 +225,6 @@ export default function Step7Summary() {
         </div>
       </div>
 
-      {/* Notes */}
       <div className="card bg-yellow-50 border border-jira-warning">
         <div className="flex items-start space-x-3">
           <FiInfo className="text-lg text-jira-warning flex-shrink-0 mt-0.5" />

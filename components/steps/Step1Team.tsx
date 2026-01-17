@@ -42,7 +42,6 @@ export default function Step1Team() {
         </div>
       </div>
 
-      {/* Project Name */}
       <div className="card bg-primary-50 border border-jira-blue">
         <label className="label text-jira-darkBlue text-xs">Project Name</label>
         <input
@@ -58,14 +57,12 @@ export default function Step1Team() {
         </div>
       </div>
 
-      {/* Team Members List */}
       <div className="space-y-2">
         {team.map((member) => (
           <div key={member.id} className="card hover:shadow-jira-md transition-all duration-150">
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {/* Custom Role Toggle */}
                   <div className="md:col-span-2">
                     <label className="label text-xs">Role Type</label>
                     <div className="flex space-x-2">
@@ -114,7 +111,6 @@ export default function Step1Team() {
                     </div>
                   </div>
 
-                  {/* Role - Standard or Custom */}
                   {!member.isCustomRole ? (
                     <div>
                       <label className="label text-xs">Role</label>
@@ -146,7 +142,6 @@ export default function Step1Team() {
                     </div>
                   )}
 
-                  {/* Level */}
                   <div>
                     <label className="label text-xs">Level</label>
                     <Select
@@ -163,7 +158,6 @@ export default function Step1Team() {
                     />
                   </div>
 
-                  {/* Hourly Rate */}
                   <div>
                     <label className="label text-xs">Hourly Rate ($)</label>
                     <input
@@ -177,7 +171,6 @@ export default function Step1Team() {
                     />
                   </div>
 
-                  {/* Hours per Day */}
                   <div>
                     <label className="label text-xs">Hours per Day</label>
                     <input
@@ -193,7 +186,6 @@ export default function Step1Team() {
                     <p className="text-xs text-jira-textSecondary mt-0.5">Usually 6-8 hours</p>
                   </div>
 
-                  {/* Quantity */}
                   <div>
                     <label className="label text-xs">Number of Workers</label>
                     <input
@@ -208,7 +200,6 @@ export default function Step1Team() {
                   </div>
                 </div>
 
-                {/* Rate Summary for Member */}
                 <div className="mt-2 p-2 bg-primary-50 rounded border border-jira-border">
                   <div className="font-medium text-jira-darkBlue text-xs">
                     {member.isCustomRole ? (
@@ -226,7 +217,6 @@ export default function Step1Team() {
                 </div>
               </div>
 
-              {/* Delete Button */}
               <button
                 onClick={() => removeTeamMember(member.id)}
                 className="ml-2 p-1.5 text-jira-error hover:bg-red-50 rounded transition-colors"
@@ -239,7 +229,6 @@ export default function Step1Team() {
         ))}
       </div>
 
-      {/* Add Member Button */}
       <button
         onClick={handleAddMember}
         className="w-full py-2.5 sm:py-2 border-2 border-dashed border-jira-border rounded text-jira-blue text-xs sm:text-sm font-medium hover:bg-primary-50 hover:border-jira-blue transition-all flex items-center justify-center space-x-2"
@@ -248,7 +237,6 @@ export default function Step1Team() {
         <span>Add Team Member</span>
       </button>
 
-      {/* Team Summary */}
       {team.length > 0 && (
         <div className="card bg-jira-blue text-white shadow-jira-md">
           <div className="text-center px-2">

@@ -35,7 +35,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAdSense />
         <GoogleTagManager />
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NHQZVH2P"

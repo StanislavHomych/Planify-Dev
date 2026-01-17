@@ -1,38 +1,38 @@
-# Швидкий старт
+# Quick Start
 
-## 1. Встановлення залежностей
+## 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-## 2. Запуск dev сервера
+## 2. Run Dev Server
 
 ```bash
 npm run dev
 ```
 
-Відкрийте браузер на [http://localhost:3000](http://localhost:3000)
+Open browser at [http://localhost:3000](http://localhost:3000)
 
-## 3. Build для production
+## 3. Build for Production
 
 ```bash
 npm run build
 npm start
 ```
 
-## Структура проекту
+## Project Structure
 
 ```
 estimateCalc/
 ├── app/                      # Next.js App Router
-│   ├── page.tsx             # Головна сторінка (Landing)
+│   ├── page.tsx             # Home page (Landing)
 │   ├── calculator/          
-│   │   └── page.tsx         # Сторінка калькулятора
+│   │   └── page.tsx         # Calculator page
 │   ├── layout.tsx           # Root layout
-│   └── globals.css          # Глобальні стилі
+│   └── globals.css          # Global styles
 ├── components/
-│   └── steps/               # Компоненти кроків калькулятора
+│   └── steps/               # Calculator step components
 │       ├── Step1Team.tsx
 │       ├── Step2Design.tsx
 │       ├── Step3Features.tsx
@@ -43,78 +43,77 @@ estimateCalc/
 ├── store/
 │   └── calculator.ts        # Zustand store
 ├── types/
-│   └── calculator.ts        # TypeScript types
+│   └── calculator.ts         # TypeScript types
 ├── data/
-│   ├── features.ts          # Функції та константи
-│   └── templates.ts         # Шаблони проектів
+│   ├── features.ts          # Features and constants
+│   └── templates.ts         # Project templates
 ├── utils/
-│   └── exportPDF.ts         # PDF експорт
+│   └── exportPDF.ts         # PDF export
 └── package.json
 ```
 
-## Як користуватися
+## How to Use
 
-### Крок 1: Команда
-1. Натисніть "Додати члена команди"
-2. Виберіть роль та рівень
-3. Вкажіть погодинну ставку (або використайте рекомендовану)
-4. Встановіть години роботи на день (зазвичай 6-8)
-5. Додайте кількість працівників цієї ролі
+### Step 1: Team
+1. Click "Add Team Member"
+2. Select role and level
+3. Specify hourly rate (or use recommended)
+4. Set working hours per day (usually 6-8)
+5. Add number of workers for this role
 
-💡 **Важливо**: Вам НЕ треба вказувати кількість днів роботи! Калькулятор автоматично розрахує необхідний час на основі вибраних функцій.
+**Important**: You do NOT need to specify number of working days! The calculator automatically calculates required time based on selected features.
 
-### Крок 2: Дизайн
-1. Оберіть складність (простий/середній/складний)
-2. Вкажіть кількість екранів/сторінок
-3. Додайте додаткові послуги (логотип, іконки, анімації)
-4. Оберіть пристрої для адаптивності
+### Step 2: Design
+1. Select complexity (simple/medium/complex)
+2. Specify number of screens/pages
+3. Add additional services (logo, icons, animations)
+4. Select devices for responsiveness
 
-### Крок 3: Функції
-1. Розгорніть категорії функцій
-2. Виберіть потрібні функції
-3. За потреби налаштуйте кількість годин вручну
+### Step 3: Features
+1. Expand feature categories
+2. Select required features
+3. Adjust number of hours manually if needed
 
-### Крок 4: Технології
-1. Оберіть Frontend framework
-2. Оберіть Backend stack
-3. Оберіть базу даних
-4. Додайте хмарні сервіси за потреби
+### Step 4: Technologies
+1. Select Frontend framework
+2. Select Backend stack
+3. Select database
+4. Add cloud services if needed
 
-### Крок 5: Тестування
-1. Увімкніть мануальне тестування
-2. Налаштуйте відсоток часу на тестування
-3. За потреби додайте автоматизоване тестування
+### Step 5: Testing
+1. Enable manual testing
+2. Configure percentage of time for testing
+3. Add automated testing if needed
 
-### Крок 6: Додатково
-1. Оберіть термін підтримки
-2. Додайте документацію
-3. Налаштуйте буфер на непередбачені витрати
-4. Додайте інші витрати
+### Step 6: Additional
+1. Select support period
+2. Add documentation
+3. Configure buffer for unexpected costs
+4. Add other costs
 
-### Крок 7: Результат
-1. Переглядайте детальний breakdown
-2. Експортуйте в PDF
-3. Збережіть розрахунок як JSON
+### Step 7: Results
+1. View detailed breakdown
+2. Export to PDF
+3. Save calculation as JSON
 
-## Корисні команди
+## Useful Commands
 
 ```bash
-# Очистити кеш та node_modules
+# Clear cache and node_modules
 rm -rf node_modules .next
 npm install
 
-# Перевірка типів
+# Type checking
 npx tsc --noEmit
 
-# Форматування коду (якщо є prettier)
+# Code formatting (if prettier is available)
 npx prettier --write .
 ```
 
-## Підтримка
+## Support
 
-Якщо виникли питання або проблеми, створіть issue в репозиторії.
+If you have questions or issues, create an issue in the repository.
 
 ---
 
-Створено для української IT спільноти 🇺🇦
-
+Created for the IT community

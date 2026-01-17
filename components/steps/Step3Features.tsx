@@ -46,7 +46,6 @@ export default function Step3Features() {
         </div>
       </div>
 
-      {/* Selected Count */}
       {selectedCount > 0 && (
         <div className="card bg-primary-50 border border-jira-blue">
           <div className="flex items-center space-x-3">
@@ -58,7 +57,6 @@ export default function Step3Features() {
         </div>
       )}
 
-      {/* Features by Category */}
       <div className="space-y-3">
         {Object.entries(groupedFeatures).map(([category, categoryFeatures]) => {
           const isExpanded = expandedCategories.includes(category);
@@ -66,7 +64,6 @@ export default function Step3Features() {
 
           return (
             <div key={category} className="card hover:shadow-jira-md transition-all duration-150">
-              {/* Category Header */}
               <button
                 onClick={() => toggleCategory(category)}
                 className="w-full flex items-center justify-between text-left gap-2"
@@ -93,7 +90,6 @@ export default function Step3Features() {
                 )}
               </button>
 
-              {/* Category Features */}
               {isExpanded && (
                 <div className="mt-3 space-y-2 pl-4 sm:pl-7">
                   {categoryFeatures.map((feature) => (
@@ -132,7 +128,6 @@ export default function Step3Features() {
                             </div>
                           </div>
 
-                          {/* Custom Hours (shown when selected) */}
                           {feature.selected && (
                             <div className="mt-3 pt-3 border-t border-jira-border">
                               <div className="text-xs text-jira-textSecondary mb-2 flex items-center space-x-1">

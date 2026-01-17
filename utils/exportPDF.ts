@@ -29,8 +29,7 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
   
   yPos += 15;
   
-  // Main Summary Box
-  doc.setFillColor(14, 165, 233); // primary-600
+  doc.setFillColor(14, 165, 233);
   doc.rect(leftMargin, yPos, pageWidth - 40, 25, 'F');
   
   doc.setTextColor(255, 255, 255);
@@ -42,7 +41,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
   yPos += 35;
   doc.setTextColor(0, 0, 0);
   
-  // Team Costs
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
   doc.text('Breakdown by Roles:', leftMargin, yPos);
@@ -66,7 +64,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
   
   yPos += 5;
   
-  // Feature Costs
   if (summary.featureCosts.length > 0) {
     if (yPos > 250) {
       doc.addPage();
@@ -87,7 +84,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
         yPos = 20;
       }
       
-      // Feature name (may need to be split if too long)
       const featureName = featureCost.featureName.length > 50 
         ? featureCost.featureName.substring(0, 47) + '...'
         : featureCost.featureName;
@@ -111,7 +107,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
     yPos += 5;
   }
   
-  // Additional Costs
   if (yPos > 230) {
     doc.addPage();
     yPos = 20;
@@ -146,7 +141,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
   
   yPos += 10;
   
-  // Final Total
   doc.setFillColor(30, 30, 30);
   doc.rect(leftMargin, yPos, pageWidth - 40, 15, 'F');
   
@@ -161,7 +155,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
   doc.setFontSize(8);
   doc.setFont('helvetica', 'italic');
   
-  // Notes
   const notes = [
     'Notes:',
     '- This is a preliminary estimate. Final cost may vary',
@@ -178,7 +171,6 @@ export const exportToPDF = (summary: CostSummary, projectName: string = 'Project
     yPos += 5;
   });
   
-  // Save PDF
   const sanitizedProjectName = projectName
     .replace(/[^a-z0-9]/gi, '_')
     .toLowerCase()

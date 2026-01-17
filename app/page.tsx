@@ -6,7 +6,6 @@ import * as Fi from 'react-icons/fi';
 export default function Home() {
   return (
     <div className="min-h-screen bg-jira-background">
-      {/* Header */}
       <header className="bg-white border-b border-jira-border sticky top-0 z-50 shadow-jira">
         <div className="container mx-auto px-4 py-3 sm:py-4">
           <nav className="flex items-center justify-between">
@@ -34,7 +33,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
       <main className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
         <div className="text-center max-w-4xl mx-auto">
       
@@ -74,7 +72,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12 max-w-5xl mx-auto">
           <div className="card text-center hover:shadow-jira-md transition-all duration-150">
             <div className="inline-flex items-center justify-center w-14 h-14 bg-primary-50 rounded-lg mb-4 border border-jira-border">
@@ -107,7 +104,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* How it works */}
         <div className="mt-8 sm:mt-12 max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-jira-darkBlue px-2">How It Works?</h2>
           
@@ -162,7 +158,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* FAQ Section */}
         <div className="mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-jira-darkBlue px-2">
             Frequently Asked Questions
@@ -242,11 +237,9 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="bg-white border-t border-jira-border mt-12 sm:mt-20">
         <div className="container mx-auto px-4 py-12 sm:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
-            {/* Brand Section */}
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-jira-blue rounded flex items-center justify-center">
@@ -259,7 +252,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Navigation Columns */}
             <div>
               <h3 className="text-jira-darkBlue font-semibold mb-4 text-sm uppercase tracking-wide">Navigation</h3>
               <ul className="space-y-3 text-sm">
@@ -343,17 +335,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Disclaimer */}
           <div className="border-t border-jira-border pt-6 mb-6">
             <p className="text-xs text-jira-textSecondary leading-relaxed max-w-4xl">
               <strong className="text-jira-darkBlue">Disclaimer:</strong> Projekto provides high-level estimates for web and mobile application development based on typical industry practices, average market rates, and the inputs you provide. All calculations are indicative only and should not be interpreted as fixed quotes, contractual offers, or professional advice. Actual project cost and delivery time may vary depending on: scope changes; technical complexity; team structure and experience; third-party services and integrations; project management and execution approach. Projekto is designed to support early planning, budgeting, and decision-making, not to replace detailed technical scoping or formal proposals. Use of this calculator is at your own discretion.
             </p>
           </div>
 
-          {/* Separator */}
           <div className="border-t border-jira-border my-8"></div>
 
-          {/* Bottom Section */}
           <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-jira-textSecondary gap-3 sm:gap-0">
             <div>
               <p>© 2025 Projekto. All rights reserved.</p>
@@ -371,7 +360,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* SEO FAQ Schema (JSON-LD) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
