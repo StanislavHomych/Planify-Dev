@@ -5004,7 +5004,7 @@ const articles = {
 
         <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">Shopify</h3>
         <p className="text-jira-textSecondary leading-relaxed mb-2">
-          Shopify is a hosted platform optimized for speed to market.
+          <a href="https://shopify.pxf.io/qzB6XN" target="_blank" rel="noopener noreferrer" className="text-jira-blue hover:underline">Shopify</a> is a hosted platform optimized for speed to market.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-2">
           <strong>Best for</strong>
@@ -5443,7 +5443,7 @@ const articles = {
         </div>
 
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          Most people estimate an e-commerce website as a one-time project: "design + development + launch." But the real cost of e-commerce is closer to running a small software business. Even if you choose Shopify or WooCommerce, you'll still pay for things like subscriptions, apps, payment fees, maintenance, performance, security, and support.
+          Most people estimate an e-commerce website as a one-time project: "design + development + launch." But the real <strong><Link href="/blog/ecommerce-website-development-cost" className="text-jira-blue hover:underline">cost of e-commerce</Link></strong> is closer to running a small software business. Even if you choose Shopify or WooCommerce, you'll still pay for things like subscriptions, apps, payment fees, maintenance, performance, security, and support.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           This guide covers the hidden and ongoing costs that are often missed in early estimates — and how to model them realistically so you don't get surprised after launch.
@@ -5472,7 +5472,7 @@ const articles = {
         
         <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">Shopify</h3>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Shopify's build cost may be lower, but ongoing costs can be higher due to:
+          <a href="https://shopify.pxf.io/qzB6XN" target="_blank" rel="noopener noreferrer" className="text-jira-blue hover:underline">Shopify's</a> build cost may be lower, but ongoing costs can be higher due to:
         </p>
         <ul className="list-disc list-inside text-jira-textSecondary mb-4 space-y-2 ml-4">
           <li>monthly subscription plan</li>
@@ -6017,7 +6017,7 @@ const articles = {
         
         <h3 className="text-xl font-semibold text-jira-darkBlue mb-3 mt-6">Shopify Cost Structure</h3>
         <p className="text-jira-textSecondary leading-relaxed mb-4">
-          Shopify is a hosted, subscription-based platform.
+          <a href="https://shopify.pxf.io/qzB6XN" target="_blank" rel="noopener noreferrer" className="text-jira-blue hover:underline">Shopify</a> is a hosted, subscription-based platform.
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-2">
           <strong>You pay for:</strong>
@@ -6300,7 +6300,7 @@ const articles = {
           <li>Plan realistic maintenance buffers</li>
         </ul>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
-          👉 Use <Link href="/calculator" className="text-jira-blue hover:underline">Projecto</Link> to estimate both platforms with the same inputs and compare results.
+          👉 Use Projecto to estimate both platforms with the same inputs and compare results.
         </p>
 
         <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-8">Conclusion</h2>
