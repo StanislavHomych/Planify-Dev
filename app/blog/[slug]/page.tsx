@@ -3869,7 +3869,7 @@ const articles = {
   },
   'software-development-cost-marketplace': {
     title: 'Software Development Cost for Marketplace Platforms (2026 Guide)',
-    date: '01/01/2026',
+    date: '18/01/2026',
     metaTitle: 'Software Development Cost for Marketplace Platforms (2026 Guide)',
     metaDescription: 'Learn what drives software development cost for marketplace platforms and how to choose the right calculator inputs for accurate cost estimation.',
     content: (
@@ -4369,7 +4369,7 @@ const articles = {
   },
   'fintech-app-development-cost': {
     title: 'Fintech App Development Cost (Banking, Forex, ETFs) | Projecto',
-    date: '01/01/2026',
+    date: '18/01/2026',
     metaTitle: 'Fintech App Development Cost (Banking, Forex, ETFs) | Projecto',
     metaDescription: 'Estimate fintech development cost with recommended inputs for banking and investing apps (forex, CFDs, ETFs): team, screens, features, QA, stack.',
     content: (
@@ -4920,7 +4920,7 @@ const articles = {
   },
   'ecommerce-website-development-cost': {
     title: 'E-commerce Website Development Cost (Shopify & WooCommerce Guide)',
-    date: '01/01/2026',
+    date: '18/01/2026',
     metaTitle: 'E-commerce Website Development Cost (Shopify & WooCommerce Guide)',
     metaDescription: 'Learn how to estimate e-commerce website development costs. Compare Shopify, WooCommerce, and custom builds with real input recommendations.',
     content: (

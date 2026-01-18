@@ -76,21 +76,21 @@ export const articles: Article[] = [
   {
     slug: 'software-development-cost-marketplace',
     title: 'Software Development Cost for Marketplace Platforms (2026 Guide)',
-    date: '01/01/2026',
+    date: '18/01/2026',
     excerpt: 'Learn what drives software development cost for marketplace platforms and how to choose the right calculator inputs for accurate cost estimation.',
     heroImage: '/blog1.png'
   },
   {
     slug: 'fintech-app-development-cost',
     title: 'Fintech App Development Cost (Banking, Forex, ETFs) | Projecto',
-    date: '01/01/2026',
+    date: '18/01/2026',
     excerpt: 'Estimate fintech development cost with recommended inputs for banking and investing apps (forex, CFDs, ETFs): team, screens, features, QA, stack.',
     heroImage: '/blog2.png'
   },
   {
     slug: 'ecommerce-website-development-cost',
     title: 'E-commerce Website Development Cost (Shopify & WooCommerce Guide)',
-    date: '01/01/2026',
+    date: '18/01/2026',
     excerpt: 'Learn how to estimate e-commerce website development costs. Compare Shopify, WooCommerce, and custom builds with real input recommendations.',
     heroImage: '/blog3.png'
   },
