@@ -107,6 +107,20 @@ export const articles: Article[] = [
     date: '18/01/2026',
     excerpt: 'Compare Shopify vs WooCommerce total cost of ownership over 1 and 3 years. Real numbers for platform fees, apps, maintenance, and long-term costs.',
     heroImage: '/blog5.png'
+  },
+  {
+    slug: 'healthcare-software-development-cost',
+    title: 'Healthcare Software Development Cost (Medical App Estimation Guide)',
+    date: '19/01/2026',
+    excerpt: 'Learn how to estimate healthcare software development costs, including team setup, features, security, QA, and real-world budget ranges.',
+    heroImage: '/blog7.png'
+  },
+  {
+    slug: 'telemedicine-app-development-cost',
+    title: 'Telemedicine App Development Cost (Virtual Healthcare Estimation Guide)',
+    date: '19/01/2026',
+    excerpt: 'Learn how to estimate telemedicine app development cost, including video, security, QA, features, and realistic budget ranges.',
+    heroImage: '/image8.png'
   }
 ];
 

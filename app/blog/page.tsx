@@ -1,9 +1,169 @@
 'use client';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { useMemo, Suspense } from 'react';
 import * as Fi from 'react-icons/fi';
 import { articles } from '@/data/articles';
 import { SiFacebook, SiInstagram, SiThreads, SiYoutube } from 'react-icons/si';
+
+const ARTICLES_PER_PAGE = 10;
+
+// Parse date from DD/MM/YYYY format
+const parseDate = (dateString: string): Date => {
+  const [day, month, year] = dateString.split('/').map(Number);
+  return new Date(year, month - 1, day);
+};
+
+// Sort articles by date (newest first)
+const sortedArticles = [...articles].sort((a, b) => {
+  const dateA = parseDate(a.date);
+  const dateB = parseDate(b.date);
+  return dateB.getTime() - dateA.getTime(); // Newest first
+});
+
+function BlogContent() {
+  const searchParams = useSearchParams();
+  const pageParam = parseInt(searchParams.get('page') || '1', 10);
+  const totalPages = Math.ceil(sortedArticles.length / ARTICLES_PER_PAGE);
+  
+  // Validate page number
+  const currentPage = pageParam < 1 ? 1 : pageParam > totalPages ? totalPages : pageParam;
+
+  const { paginatedArticles } = useMemo(() => {
+    const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+    const endIndex = startIndex + ARTICLES_PER_PAGE;
+    const paginatedArticles = sortedArticles.slice(startIndex, endIndex);
+
+    return { paginatedArticles };
+  }, [currentPage]);
+
+  const getPageUrl = (page: number) => {
+    if (page === 1) {
+      return '/blog';
+    }
+    return `/blog?page=${page}`;
+  };
+
+  return (
+    <>
+      <div className="space-y-6">
+        {paginatedArticles.map((article) => (
+          <Link 
+            key={article.slug}
+            href={`/blog/${article.slug}`}
+            className="card block p-6 hover:shadow-jira-md transition-all duration-150"
+          >
+            {article.heroImage && (
+              <div className="mb-6 -mx-6 -mt-6">
+                <img 
+                  src={article.heroImage} 
+                  alt={article.title}
+                  className="w-full h-64 sm:h-80 object-contain bg-gradient-to-br from-purple-50 to-blue-50 rounded-t-lg"
+                />
+              </div>
+            )}
+            <div className="flex items-start justify-between mb-3">
+              <h2 className="text-2xl font-bold text-jira-darkBlue hover:text-jira-blue transition-colors">
+                {article.title}
+              </h2>
+              <span className="text-sm text-jira-textSecondary whitespace-nowrap ml-4">
+                {article.date}
+              </span>
+            </div>
+            <p className="text-jira-textSecondary leading-relaxed">
+              {article.excerpt}
+            </p>
+            <div className="mt-4 inline-flex items-center text-jira-blue hover:underline">
+              <span className="text-sm font-medium">Read more</span>
+              <Fi.FiArrowRight className="ml-2" />
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-sm text-jira-textSecondary">
+            Page {currentPage} of {totalPages}
+          </div>
+          
+          <div className="flex items-center gap-2">
+            {/* Previous Button */}
+            {currentPage > 1 ? (
+              <Link
+                href={getPageUrl(currentPage - 1)}
+                className="px-4 py-2 border border-jira-border rounded-lg text-jira-textSecondary hover:bg-jira-background hover:text-jira-blue transition-colors flex items-center gap-2"
+              >
+                <Fi.FiChevronLeft className="text-lg" />
+                <span>Previous</span>
+              </Link>
+            ) : (
+              <div className="px-4 py-2 border border-jira-border rounded-lg text-jira-textSecondary opacity-50 cursor-not-allowed flex items-center gap-2">
+                <Fi.FiChevronLeft className="text-lg" />
+                <span>Previous</span>
+              </div>
+            )}
+
+            {/* Page Numbers */}
+            <div className="flex items-center gap-1">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                // Show first page, last page, current page, and pages around current
+                const showPage =
+                  page === 1 ||
+                  page === totalPages ||
+                  (page >= currentPage - 1 && page <= currentPage + 1);
+
+                if (!showPage) {
+                  // Show ellipsis
+                  if (page === currentPage - 2 || page === currentPage + 2) {
+                    return (
+                      <span key={page} className="px-2 text-jira-textSecondary">
+                        ...
+                      </span>
+                    );
+                  }
+                  return null;
+                }
+
+                return (
+                  <Link
+                    key={page}
+                    href={getPageUrl(page)}
+                    className={`px-4 py-2 border border-jira-border rounded-lg transition-colors ${
+                      page === currentPage
+                        ? 'bg-jira-blue text-white border-jira-blue'
+                        : 'text-jira-textSecondary hover:bg-jira-background hover:text-jira-blue'
+                    }`}
+                  >
+                    {page}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Next Button */}
+            {currentPage < totalPages ? (
+              <Link
+                href={getPageUrl(currentPage + 1)}
+                className="px-4 py-2 border border-jira-border rounded-lg text-jira-textSecondary hover:bg-jira-background hover:text-jira-blue transition-colors flex items-center gap-2"
+              >
+                <span>Next</span>
+                <Fi.FiChevronRight className="text-lg" />
+              </Link>
+            ) : (
+              <div className="px-4 py-2 border border-jira-border rounded-lg text-jira-textSecondary opacity-50 cursor-not-allowed flex items-center gap-2">
+                <span>Next</span>
+                <Fi.FiChevronRight className="text-lg" />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
 
 export default function BlogPage() {
   return (
@@ -37,40 +197,18 @@ export default function BlogPage() {
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold text-jira-darkBlue mb-8">Blog</h1>
         
-        <div className="space-y-6">
-          {articles.map((article) => (
-            <Link 
-              key={article.slug}
-              href={`/blog/${article.slug}`}
-              className="card block p-6 hover:shadow-jira-md transition-all duration-150"
-            >
-              {article.heroImage && (
-                <div className="mb-6 -mx-6 -mt-6">
-                  <img 
-                    src={article.heroImage} 
-                    alt={article.title}
-                    className="w-full h-64 sm:h-80 object-contain bg-gradient-to-br from-purple-50 to-blue-50 rounded-t-lg"
-                  />
-                </div>
-              )}
-              <div className="flex items-start justify-between mb-3">
-                <h2 className="text-2xl font-bold text-jira-darkBlue hover:text-jira-blue transition-colors">
-                  {article.title}
-                </h2>
-                <span className="text-sm text-jira-textSecondary whitespace-nowrap ml-4">
-                  {article.date}
-                </span>
+        <Suspense fallback={
+          <div className="space-y-6">
+            {sortedArticles.slice(0, ARTICLES_PER_PAGE).map((article) => (
+              <div key={article.slug} className="card block p-6 animate-pulse">
+                <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
               </div>
-              <p className="text-jira-textSecondary leading-relaxed">
-                {article.excerpt}
-              </p>
-              <div className="mt-4 inline-flex items-center text-jira-blue hover:underline">
-                <span className="text-sm font-medium">Read more</span>
-                <Fi.FiArrowRight className="ml-2" />
-              </div>
-            </Link>
-          ))}
-        </div>
+            ))}
+          </div>
+        }>
+          <BlogContent />
+        </Suspense>
       </main>
 
       {/* Footer */}
