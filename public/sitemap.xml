@@ -78,5 +78,19 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://projecto-calculator.com/blog/hidden-costs-ecommerce-website</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://projecto-calculator.com/blog/shopify-vs-woocommerce-total-cost</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
 

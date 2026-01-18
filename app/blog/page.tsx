@@ -44,6 +44,15 @@ export default function BlogPage() {
               href={`/blog/${article.slug}`}
               className="card block p-6 hover:shadow-jira-md transition-all duration-150"
             >
+              {article.heroImage && (
+                <div className="mb-6 -mx-6 -mt-6">
+                  <img 
+                    src={article.heroImage} 
+                    alt={article.title}
+                    className="w-full h-64 sm:h-80 object-contain bg-gradient-to-br from-purple-50 to-blue-50 rounded-t-lg"
+                  />
+                </div>
+              )}
               <div className="flex items-start justify-between mb-3">
                 <h2 className="text-2xl font-bold text-jira-darkBlue hover:text-jira-blue transition-colors">
                   {article.title}

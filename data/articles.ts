@@ -3,6 +3,7 @@ export interface Article {
   title: string;
   date: string;
   excerpt: string;
+  heroImage?: string;
 }
 
 export const articles: Article[] = [
@@ -71,6 +72,41 @@ export const articles: Article[] = [
     title: 'Software Development Cost for SaaS Projects (2026 Guide)',
     date: '01/01/2026',
     excerpt: 'Understand SaaS software development cost, pricing ranges, key cost drivers, and how to estimate your SaaS project budget accurately.'
+  },
+  {
+    slug: 'software-development-cost-marketplace',
+    title: 'Software Development Cost for Marketplace Platforms (2026 Guide)',
+    date: '01/01/2026',
+    excerpt: 'Learn what drives software development cost for marketplace platforms and how to choose the right calculator inputs for accurate cost estimation.',
+    heroImage: '/blog1.png'
+  },
+  {
+    slug: 'fintech-app-development-cost',
+    title: 'Fintech App Development Cost (Banking, Forex, ETFs) | Projecto',
+    date: '01/01/2026',
+    excerpt: 'Estimate fintech development cost with recommended inputs for banking and investing apps (forex, CFDs, ETFs): team, screens, features, QA, stack.',
+    heroImage: '/blog2.png'
+  },
+  {
+    slug: 'ecommerce-website-development-cost',
+    title: 'E-commerce Website Development Cost (Shopify & WooCommerce Guide)',
+    date: '01/01/2026',
+    excerpt: 'Learn how to estimate e-commerce website development costs. Compare Shopify, WooCommerce, and custom builds with real input recommendations.',
+    heroImage: '/blog3.png'
+  },
+  {
+    slug: 'hidden-costs-ecommerce-website',
+    title: 'Hidden Costs of Building and Running an E-commerce Website (The Real Monthly Cost Breakdown)',
+    date: '18/01/2026',
+    excerpt: 'Learn the hidden costs of e-commerce websites: platform fees, apps, payment processing, hosting, maintenance, security, and real monthly cost examples.',
+    heroImage: '/blog4.png'
+  },
+  {
+    slug: 'shopify-vs-woocommerce-total-cost',
+    title: 'Shopify vs WooCommerce Cost: Total Cost of Ownership (1 vs 3 Years)',
+    date: '18/01/2026',
+    excerpt: 'Compare Shopify vs WooCommerce total cost of ownership over 1 and 3 years. Real numbers for platform fees, apps, maintenance, and long-term costs.',
+    heroImage: '/blog5.png'
   }
 ];
 
