@@ -13,6 +13,7 @@ import Step7Summary from '@/components/steps/Step7Summary';
 import { trackCalcStarted } from '@/utils/gtm';
 import * as FiIcons from 'react-icons/fi';
 import Link from 'next/link';
+import { SiFacebook, SiInstagram, SiThreads, SiYoutube } from 'react-icons/si';
 
 const FiArrowLeft = FiIcons.FiArrowLeft;
 const FiArrowRight = FiIcons.FiArrowRight;
@@ -263,9 +264,47 @@ export default function CalculatorPage() {
                 </div>
                 <span className="text-2xl font-bold text-jira-darkBlue">Projekto</span>
               </div>
-              <p className="text-sm text-jira-textSecondary leading-relaxed max-w-xs">
+              <p className="text-sm text-jira-textSecondary leading-relaxed max-w-xs mb-4">
                 Professional software project cost estimation and planning tool.
               </p>
+              <div className="flex items-center space-x-3">
+                <a
+                  href="https://www.facebook.com/people/Projecto-Calculator/61586748986123/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-jira-textSecondary hover:text-jira-blue transition-colors"
+                  aria-label="Facebook"
+                >
+                  <SiFacebook className="text-xl" />
+                </a>
+                <a
+                  href="https://www.instagram.com/projecto_calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-jira-textSecondary hover:text-jira-blue transition-colors"
+                  aria-label="Instagram"
+                >
+                  <SiInstagram className="text-xl" />
+                </a>
+                <a
+                  href="https://www.threads.com/@projecto_calculator?igshid=NTc4MTIwNjQ2YQ%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-jira-textSecondary hover:text-jira-blue transition-colors"
+                  aria-label="Threads"
+                >
+                  <SiThreads className="text-xl" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@projecto_calculator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-jira-textSecondary hover:text-jira-blue transition-colors"
+                  aria-label="YouTube"
+                >
+                  <SiYoutube className="text-xl" />
+                </a>
+              </div>
             </div>
 
             <div>
