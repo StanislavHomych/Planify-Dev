@@ -338,35 +338,35 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-6 gap-y-3">
                 <ul className="space-y-3 text-sm">
                   <li>
-                    <Link href="/blog/project-cost-calculation" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                      Project Cost Calculation
+                    <Link href="/cost-to-build/uber-like-app" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Uber App Cost
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog/software-development-cost" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                      Software Development Cost
+                    <Link href="/cost-to-build/airbnb-like-app" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Airbnb App Cost
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog/cost-for-application-development" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                      Application Development Cost
+                    <Link href="/cost-to-build/instagram-like-app" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Instagram App Cost
                     </Link>
                   </li>
                 </ul>
                 <ul className="space-y-3 text-sm">
                   <li>
-                    <Link href="/blog/estimate-software-development-cost" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                      Estimate Development Cost
+                    <Link href="/cost-to-build/tiktok-like-app" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      TikTok App Cost
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog/app-cost-calculator" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                      App Cost Calculator
+                    <Link href="/cost-to-build/marketplace-app" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      Marketplace App Cost
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog/website-cost-calculator" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
-                      Website Cost Calculator
+                    <Link href="/cost-to-build/ai-app" className="text-jira-textSecondary hover:text-jira-blue transition-colors">
+                      AI App Cost
                     </Link>
                   </li>
                 </ul>

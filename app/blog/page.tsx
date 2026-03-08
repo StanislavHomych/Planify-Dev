@@ -48,10 +48,15 @@ function BlogContent() {
   return (
     <>
       <div className="space-y-6">
-        {paginatedArticles.map((article) => (
+        {paginatedArticles.map((article) => {
+          const articleUrl = article.isCostEstimate 
+            ? `/cost-to-build/${article.slug}`
+            : `/blog/${article.slug}`;
+          
+          return (
           <Link 
             key={article.slug}
-            href={`/blog/${article.slug}`}
+            href={articleUrl}
             className="card block p-6 hover:shadow-jira-md transition-all duration-150"
           >
             {article.heroImage && (
@@ -64,9 +69,18 @@ function BlogContent() {
               </div>
             )}
             <div className="flex items-start justify-between mb-3">
-              <h2 className="text-2xl font-bold text-jira-darkBlue hover:text-jira-blue transition-colors">
-                {article.title}
-              </h2>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  {article.isCostEstimate && (
+                    <span className="inline-block px-2 py-0.5 bg-jira-success text-white text-xs font-semibold rounded">
+                      Cost Estimate
+                    </span>
+                  )}
+                </div>
+                <h2 className="text-2xl font-bold text-jira-darkBlue hover:text-jira-blue transition-colors">
+                  {article.title}
+                </h2>
+              </div>
               <span className="text-sm text-jira-textSecondary whitespace-nowrap ml-4">
                 {article.date}
               </span>
@@ -79,7 +93,8 @@ function BlogContent() {
               <Fi.FiArrowRight className="ml-2" />
             </div>
           </Link>
-        ))}
+          );
+        })}
       </div>
 
       {/* Pagination */}
