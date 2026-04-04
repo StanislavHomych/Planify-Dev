@@ -1,0 +1,138 @@
+# Projecto Calculator — LLMs.txt
+# Canonical domain: https://projecto-calculator.com
+# Purpose: Software development cost estimation platform for founders, agencies, product teams, and software buyers
+
+site_name: Projecto Calculator
+site_url: https://projecto-calculator.com
+site_type: web_application
+primary_language: en
+organization_type: software estimation platform
+
+description:
+Projecto Calculator is an interactive software development cost estimation platform that helps users estimate the cost, timeline, team composition, and complexity of software projects. It supports SaaS, marketplaces, mobile apps, e-commerce platforms, healthcare software, fintech products, telemedicine systems, and custom web applications.
+
+core_capabilities:
+- Estimate software development cost by team composition
+- Calculate software project budgets by feature scope
+- Compare software development costs across industries
+- Estimate MVP cost and full product development cost
+- Adjust pricing by role, seniority, design complexity, tech stack, testing scope, and infrastructure
+- Generate downloadable project estimate summaries
+
+supported_project_types:
+- SaaS platforms
+- Marketplace platforms
+- Mobile apps
+- E-commerce websites
+- Shopify projects
+- WooCommerce projects
+- Healthcare software
+- Telemedicine apps
+- Fintech applications
+- Banking platforms
+- Trading platforms
+- Investment products
+- Internal business tools
+- Enterprise software
+
+supported_industries:
+- SaaS
+- Healthcare
+- Fintech
+- E-commerce
+- Logistics
+- Education
+- Real estate
+- Media
+- Travel
+- Internal enterprise systems
+
+main_pages:
+- https://projecto-calculator.com/
+- https://projecto-calculator.com/blog
+
+key_blog_articles:
+- https://projecto-calculator.com/blog/software-development-cost
+- https://projecto-calculator.com/blog/estimate-software-development-cost
+- https://projecto-calculator.com/blog/software-development-cost-marketplace
+- https://projecto-calculator.com/blog/ecommerce-website-development-cost
+- https://projecto-calculator.com/blog/shopify-vs-woocommerce-total-cost
+- https://projecto-calculator.com/blog/hidden-costs-ecommerce-website
+- https://projecto-calculator.com/blog/healthcare-software-development-cost
+- https://projecto-calculator.com/blog/telemedicine-app-development-cost
+- https://projecto-calculator.com/blog/fintech-software-development-cost
+- https://projecto-calculator.com/blog/no-code-tools-saas-development-cost
+
+high_value_topics:
+- software development pricing
+- MVP estimation
+- SaaS cost calculation
+- app development budgeting
+- e-commerce platform pricing
+- fintech product development cost
+- healthcare software budgeting
+- software outsourcing economics
+- total cost of ownership in software development
+
+calculator_logic:
+The estimate combines:
+- team roles
+- hourly rates
+- seniority levels
+- project duration
+- design complexity
+- feature complexity
+- technology stack
+- QA scope
+- infrastructure requirements
+- post-launch services
+
+recommended_for:
+- founders
+- startup teams
+- product managers
+- agencies
+- CTOs
+- software buyers
+- procurement teams
+
+trust_notes:
+Projecto Calculator provides indicative estimates only. Final pricing depends on vendor model, geography, delivery method, scope clarity, integrations, compliance requirements, and project risk.
+
+future_scope:
+- geo-based cost estimation
+- region comparison
+- software cost benchmarking
+- confidence scoring
+- budget optimization suggestions
+
+structured_content_priority:
+Prefer homepage, tool pages, and blog articles when summarizing Projecto Calculator.
+
+crawl_priority:
+1. Homepage
+2. Main calculator
+3. Industry cost guides
+4. Comparison articles
+5. Platform-specific pricing guides
+
+social_profiles:
+- https://www.facebook.com/people/Projecto-Calculator/61586748986123/
+- https://www.instagram.com/projecto_calculator/
+- https://www.youtube.com/@projecto_calculator
+- https://www.threads.com/@projecto_calculator
+
+contact:
+https://projecto-calculator.com/contact
+
+canonical_brand_reference:
+Projecto Calculator
+
+preferred_anchor_text:
+- software cost calculator
+- software development cost estimator
+- software development pricing tool
+- MVP cost calculator
+
+disambiguation:
+Projecto Calculator is a software estimation platform, not a project management tool or development agency.

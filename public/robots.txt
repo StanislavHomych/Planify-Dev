@@ -1,19 +1,25 @@
 User-agent: *
 Allow: /
+Allow: /llms.txt
 
 Sitemap: https://projecto-calculator.com/sitemap.xml
 
 User-agent: Amazonbot
 Disallow: /
+Allow: /llms.txt
 
 User-agent: Applebot-Extended
 Disallow: /
+Allow: /llms.txt
 
 User-agent: Bytespider
 Disallow: /
+Allow: /llms.txt
 
 User-agent: CCBot
 Disallow: /
+Allow: /llms.txt
 
 User-agent: ClaudeBot
 Disallow: /
+Allow: /llms.txt
