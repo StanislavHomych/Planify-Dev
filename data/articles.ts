@@ -60,7 +60,8 @@ export const articles: Article[] = [
     slug: 'app-cost-calculator',
     title: 'App Cost Calculator: How Accurate Are Online Tools?',
     date: '01/01/2026',
-    excerpt: 'Learn how app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.'
+    excerpt:
+      'Learn how mobile app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.'
   },
   {
     slug: 'website-cost-calculator',

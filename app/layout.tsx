@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'Development Cost Calculator | EstimateCalc',
-  description: 'Calculate the cost and time for your project development',
+  description:
+    'Estimate software development costs for SaaS, apps, marketplaces, healthcare, fintech, and e-commerce projects. Calculate budget, timeline, and team requirements in minutes.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -43,7 +44,7 @@ export default function RootLayout({
               name: 'Projecto',
               url: 'https://projecto-calculator.com/',
               description:
-                'Projecto is a professional calculator for estimating time and budget for web and mobile app development projects.',
+                'Estimate software development costs for SaaS, apps, marketplaces, healthcare, fintech, and e-commerce projects. Calculate budget, timeline, and team requirements in minutes.',
               logo: {
                 '@type': 'ImageObject',
                 url: 'https://projecto-calculator.com/logo.png',
@@ -69,7 +70,7 @@ export default function RootLayout({
               applicationCategory: 'BusinessApplication',
               operatingSystem: 'Web',
               description:
-                'Projecto is a professional calculator for estimating time and budget for web and mobile app development projects. Configure team, design scope, features, tech stack, QA, and buffers to generate a cost and timeline estimate.',
+                'Estimate software development costs for SaaS, apps, marketplaces, healthcare, fintech, and e-commerce projects. Calculate budget, timeline, and team requirements in minutes. Configure team, design scope, features, tech stack, QA, and buffers to generate a cost and timeline estimate.',
               offers: {
                 '@type': 'Offer',
                 price: '0',

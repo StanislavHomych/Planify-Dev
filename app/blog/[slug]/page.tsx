@@ -2416,7 +2416,8 @@ const articles = {
     title: 'App Cost Calculator: How Accurate Are Online Tools?',
     date: '01/01/2026',
     metaTitle: 'App Cost Calculator: How Accurate Are Online Tools?',
-    metaDescription: 'Learn how app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.',
+    metaDescription:
+      'Learn how mobile app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.',
     content: (
       <div className="prose prose-lg max-w-none">
         <p className="text-jira-textSecondary leading-relaxed mb-6">
@@ -2775,7 +2776,7 @@ const articles = {
         "@id": "https://projecto-calculator.com/blog/app-cost-calculator"
       },
       "headline": "App Cost Calculator: How Accurate Are Online Tools?",
-      "description": "Learn how app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.",
+      "description": "Learn how mobile app cost calculators work, how accurate they are, and how to use them correctly to estimate your app development budget.",
       "datePublished": "2026-01-02",
       "dateModified": "2026-01-02",
       "inLanguage": "en",
@@ -5913,7 +5914,7 @@ const articles = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Hidden Costs of Building and Running an E-commerce Website (The Real Monthly Cost Breakdown)",
-      "description": "A detailed guide to the hidden costs of e-commerce websites, including platform fees, apps/plugins, payment processing, hosting, maintenance, security, and real monthly cost examples.",
+      "description": "Learn the hidden costs of e-commerce websites: platform fees, apps, payment processing, hosting, maintenance, security, and real monthly cost examples.",
       "image": "https://projecto-calculator.com/images/blog/hidden-costs-ecommerce-website-cover.png",
       "author": {
         "@type": "Organization",
@@ -6421,7 +6422,7 @@ const articles = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Shopify vs WooCommerce: Total Cost of Ownership (1 Year vs 3 Years)",
-      "description": "A detailed comparison of Shopify vs WooCommerce total cost of ownership over one and three years, including platform fees, apps, maintenance, and scalability costs.",
+      "description": "Compare Shopify vs WooCommerce total cost of ownership over 1 and 3 years. Real numbers for platform fees, apps, maintenance, and long-term costs.",
       "author": {
         "@type": "Organization",
         "name": "Projecto"
