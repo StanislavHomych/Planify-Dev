@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import * as Fi from 'react-icons/fi';
 import { SiFacebook, SiInstagram, SiThreads, SiYoutube } from 'react-icons/si';
+import OpenSourceCta from '@/components/OpenSourceCta';
 
 export default function Home() {
   return (
@@ -236,6 +237,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <OpenSourceCta />
       </main>
 
       <footer className="bg-white border-t border-jira-border mt-12 sm:mt-20">

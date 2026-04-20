@@ -33,6 +33,13 @@ export const articles: Article[] = [
     excerpt: 'If you have questions about Projekto, the website, or how the service works, you can reach us using the contact information below.'
   },
   {
+    slug: 'open-source-projekto-calculator',
+    title: 'Why Projekto Is Open Source: MIT License, Transparency & Community',
+    date: '20/04/2026',
+    excerpt:
+      'Projekto (Planify-Dev on GitHub) is a free, MIT-licensed development cost calculator. Learn why open source matters for estimation tools, how the stack is built, and how to contribute or self-host.'
+  },
+  {
     slug: 'project-cost-calculation',
     title: 'How to Calculate Project Cost: A Complete Guide',
     date: '01/01/2026',
@@ -123,6 +130,14 @@ export const articles: Article[] = [
     date: '19/01/2026',
     excerpt: 'Learn how to estimate telemedicine app development cost, including video, security, QA, features, and realistic budget ranges.',
     heroImage: '/image8.png'
+  },
+  {
+    slug: 'no-code-tools-saas-development-cost',
+    title: 'How No-Code Tools Like Base44 Affect SaaS Development Cost (What You Save — and What You Don’t)',
+    date: '19/01/2026',
+    excerpt:
+      'Learn how no-code tools like Base44 affect SaaS development cost. See where you save money, hidden tradeoffs, and how to estimate no-code vs custom.',
+    heroImage: '/images/blog/no-code-tools-saas-development-cost-cover.png',
   },
   // Cost-to-Build App Estimates
   {

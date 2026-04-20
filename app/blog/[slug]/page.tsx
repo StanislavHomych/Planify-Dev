@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { useEffect } from 'react';
 import * as Fi from 'react-icons/fi';
 import { SiFacebook, SiInstagram, SiThreads, SiYoutube } from 'react-icons/si';
+import NoCodeToolsSaasArticleContent from '@/components/blog/NoCodeToolsSaasArticleContent';
 
 const articles = {
   'about-us': {
@@ -418,6 +419,285 @@ const articles = {
         </p>
       </div>
     )
+  },
+  'open-source-projekto-calculator': {
+    title: 'Why Projekto Is Open Source: MIT License, Transparency & Community',
+    date: '20/04/2026',
+    metaTitle: 'Why Projekto Is Open Source (MIT) | Planify-Dev on GitHub',
+    metaDescription:
+      'Projekto (Planify-Dev) is a free MIT-licensed development cost calculator on GitHub, built with Next.js and TypeScript. Learn why transparency matters, how to contribute, fork, or self-host.',
+    content: (
+      <div className="prose prose-lg max-w-none">
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          <strong className="text-jira-darkBlue">Projekto</strong> is the product experience; the source code is
+          published on GitHub as{' '}
+          <a
+            href="https://github.com/StanislavHomych/Planify-Dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-jira-blue hover:underline"
+          >
+            Planify-Dev
+          </a>
+          — a Next.js 14 application for estimating software development cost and time. This article explains what
+          that means in practice, why we chose an open model, and how it lines up with good SEO: clear topic, unique
+          content, internal links, and a single canonical purpose for the page.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-10">What &quot;open source&quot; means here</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Anyone can read the code, propose changes, report issues, and reuse it under the terms of the license. We ship
+          the calculator UI, estimation logic, and state handling in the repository so the product is not a black box.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          The public codebase is the same family of features you use in the{' '}
+          <Link href="/calculator" className="text-jira-blue hover:underline">
+            online calculator
+          </Link>
+          : team and rates, design scope, features, tech stack, QA, buffers, and export-oriented workflows. If
+          something is unclear, you can inspect the implementation instead of guessing.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-10">License: MIT in plain language</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Planify-Dev is shared under the{' '}
+          <strong className="text-jira-darkBlue">MIT License</strong>. In short: you can use, copy, modify, merge,
+          publish, distribute, and sublicense the software, including for commercial projects, as long as you keep the
+          copyright notice and license text with copies. This is standard for many developer tools and libraries.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          This article is general information, not legal advice. For your own product, read the{' '}
+          <code className="text-sm bg-jira-background px-1.5 py-0.5 rounded border border-jira-border">LICENSE</code>{' '}
+          file in the repository and consult a qualified professional if you need certainty for compliance or
+          redistribution.
+        </p>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-10">Why open source fits a cost calculator</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          Cost and time estimation always involves assumptions. Publishing the model alongside the UI makes those
+          assumptions easier to discuss: benchmarks, multipliers, feature hours, and how results are turned into ranges.
+        </p>
+        <ul className="list-disc list-inside text-jira-textSecondary mb-6 space-y-2 ml-4">
+          <li>
+            <strong className="text-jira-darkBlue">Transparency:</strong> teams can align on what inputs mean before
+            they commit to a plan.
+          </li>
+          <li>
+            <strong className="text-jira-darkBlue">Trust:</strong> you are not asked to accept a magic number from an
+            opaque system.
+          </li>
+          <li>
+            <strong className="text-jira-darkBlue">Community:</strong> issues and pull requests improve defaults for
+            everyone.
+          </li>
+          <li>
+            <strong className="text-jira-darkBlue">SEO hygiene:</strong> one authoritative article (this page) can
+            describe the topic; the{' '}
+            <Link href="/" className="text-jira-blue hover:underline">
+              home page
+            </Link>{' '}
+            stays focused on the product, which helps search engines understand intent without duplicated boilerplate.
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-jira-darkBlue mb-4 mt-10">Tech stack &amp; documentation</h2>
+        <p className="text-jira-textSecondary leading-relaxed mb-4">
+          The stack matches what we communicate on the home page:{' '}
+          <strong className="text-jira-darkBlue">Next.js</strong>, <strong className="text-jira-darkBlue">TypeScript</strong>,{' '}
+          <strong className="text-jira-darkBlue">React</strong>, <strong className="text-jira-darkBlue">Tailwind CSS</strong>,{' '}
+          <strong className="text-jira-darkBlue">Zustand</strong>, <strong className="text-jira-darkBlue">jsPDF</strong> for
+          export, and <strong className="text-jira-darkBlue">React Icons</strong>. Setup and usage are documented in the
+          repository README; for a fast start, see{' '}
+          <a
+            href="https://github.com/StanislavHomych/Planify-Dev/blob/main/QUICKSTART.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-jira-blue hover:underline"
+          >
+            QUICKSTART.md
+          </a>
+          .
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          If you want to <strong className="text-jira-darkBlue">report a bug</strong> or suggest a feature, use{' '}
+          <a
+            href="https://github.com/StanislavHomych/Planify-Dev/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-jira-blue hover:underline"
+          >
+            GitHub Issues
+          </a>
+          . That keeps discussion next to the code and helps maintainers reproduce problems with clear context.
+        </p>
+
+        <div className="mt-12 border-t border-jira-border pt-8 not-prose">
+          <h2 className="text-2xl font-bold text-jira-darkBlue mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">Is Projekto open source?</h3>
+              <p className="text-jira-textSecondary">
+                Yes. The application is developed in the public Planify-Dev repository under the MIT License, so the
+                source is available for inspection and reuse according to that license.
+              </p>
+            </div>
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">Where is the source code?</h3>
+              <p className="text-jira-textSecondary">
+                The canonical home for the code is{' '}
+                <a
+                  href="https://github.com/StanislavHomych/Planify-Dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-jira-blue hover:underline"
+                >
+                  github.com/StanislavHomych/Planify-Dev
+                </a>
+                .
+              </p>
+            </div>
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">Can I self-host or fork the calculator?</h3>
+              <p className="text-jira-textSecondary">
+                The MIT License allows fork and commercial use, subject to its conditions (including preserving license
+                notices). Self-hosting typically means cloning the repo, installing dependencies, and deploying like any
+                other Next.js app—see the README and QUICKSTART for details.
+              </p>
+            </div>
+            <div className="border-b border-jira-border pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">Does open source change how estimates work?</h3>
+              <p className="text-jira-textSecondary">
+                No. Publishing the code does not change the estimation methodology: the same inputs still drive the same
+                structured calculations. Open source clarifies what happens between input and output.
+              </p>
+            </div>
+            <div className="pb-4">
+              <h3 className="text-lg font-semibold text-jira-darkBlue mb-2">How can I contribute?</h3>
+              <p className="text-jira-textSecondary">
+                Open a focused issue first for larger changes; small fixes and documentation improvements are welcome via
+                pull request. Keep changes scoped and describe the problem or improvement clearly so reviewers can merge
+                with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is Projekto open source?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The application is developed in the public Planify-Dev repository on GitHub under the MIT License.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where is the Planify-Dev source code?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The source code is hosted at https://github.com/StanislavHomych/Planify-Dev',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What license is Planify-Dev published under?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Planify-Dev is published under the MIT License, which allows broad reuse subject to its license terms.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I fork or self-host the development cost calculator?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The MIT License permits forking and many forms of reuse, including commercial use, subject to preserving copyright and license notices. Self-hosting follows standard Next.js deployment practices described in the repository.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does open source change how Projekto calculates estimates?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. Open source publication clarifies the implementation; the estimation methodology and inputs remain consistent with the product.',
+          },
+        },
+      ],
+    },
+    blogPostingSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      '@id': 'https://projecto-calculator.com/blog/open-source-projekto-calculator#blogposting',
+      headline: 'Why Projekto Is Open Source: MIT License, Transparency & Community',
+      description:
+        'Projekto (Planify-Dev) is a free MIT-licensed development cost calculator on GitHub. Learn why transparency matters and how to contribute or self-host.',
+      image: 'https://projecto-calculator.com/og-image.png',
+      datePublished: '2026-04-20',
+      dateModified: '2026-04-20',
+      inLanguage: 'en',
+      isAccessibleForFree: true,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://projecto-calculator.com/blog/open-source-projekto-calculator',
+      },
+      isPartOf: {
+        '@type': 'Blog',
+        '@id': 'https://projecto-calculator.com/blog#blog',
+        name: 'Projekto Blog',
+        url: 'https://projecto-calculator.com/blog',
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'Projecto',
+        url: 'https://projecto-calculator.com/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Projecto',
+        url: 'https://projecto-calculator.com/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://projecto-calculator.com/logo.png',
+        },
+      },
+      articleSection: 'Open Source',
+      keywords: [
+        'Projekto open source',
+        'Planify-Dev',
+        'development cost calculator MIT',
+        'Next.js cost calculator',
+        'software estimation transparency',
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://projecto-calculator.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Blog',
+          item: 'https://projecto-calculator.com/blog',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Why Projekto Is Open Source',
+          item: 'https://projecto-calculator.com/blog/open-source-projekto-calculator',
+        },
+      ],
+    },
   },
   'project-cost-calculation': {
     title: 'How to Calculate Project Cost: A Complete Guide',
@@ -4179,6 +4459,15 @@ const articles = {
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           This prevents massive underestimation, which is common for marketplaces.
         </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Marketplace platforms introduce additional complexity through multi-role users, transactions, and moderation
+          workflows, but the underlying estimation logic remains the same. For a step-by-step explanation of how
+          development cost is calculated across different types of projects, see our guide on{' '}
+          <Link href="/blog/estimate-software-development-cost" className="text-jira-blue font-medium hover:underline">
+            estimating software development cost
+          </Link>
+          .
+        </p>
 
         <div className="bg-jira-background border border-jira-border rounded-lg p-6 mb-8">
           <p className="text-jira-textSecondary leading-relaxed mb-2">
@@ -5270,6 +5559,15 @@ const articles = {
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           The most accurate way to estimate your project is to model it using real inputs — team, design, features, tech stack, QA, and operational overhead — before development begins.
         </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Although e-commerce websites have unique requirements around payments, integrations, and operations, they
+          follow the same core estimation principles as other software projects. For a step-by-step overview of how
+          development cost is calculated across different types of applications, see our guide on{' '}
+          <Link href="/blog/estimate-software-development-cost" className="text-jira-blue font-medium hover:underline">
+            estimating software development cost
+          </Link>
+          .
+        </p>
 
         <div className="bg-jira-background border border-jira-border rounded-lg p-6 mb-8">
           <p className="text-jira-textSecondary leading-relaxed mb-2">
@@ -6315,8 +6613,17 @@ const articles = {
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           The right choice depends on your time horizon, team capability, and growth plan.
         </p>
-        <p className="text-jira-textSecondary leading-relaxed mb-8">
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
           Before committing, model both options with realistic inputs - not just launch cost.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-8">
+          Platform comparisons are most useful when viewed in the wider context of overall project scope and
+          requirements. For a broader breakdown of how e-commerce website development costs are structured beyond
+          platform choice, see our guide on{' '}
+          <Link href="/blog/ecommerce-website-development-cost" className="text-jira-blue font-medium hover:underline">
+            e-commerce website development cost
+          </Link>
+          .
         </p>
 
         {/* FAQ Section */}
@@ -6810,6 +7117,13 @@ const articles = {
         </p>
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           If you're planning a healthcare product, use structured inputs rather than assumptions. Modeling your project properly is the only way to avoid under-budgeting and delivery risk.
+        </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Healthcare software projects follow the same core cost drivers as other digital products, with additional layers of security, compliance, and quality assurance. For a broader breakdown of how development cost is calculated across different types of software, see our guide on{' '}
+          <Link href="/blog/software-development-cost" className="text-jira-blue font-medium hover:underline">
+            software development cost
+          </Link>
+          .
         </p>
 
         <div className="bg-jira-background border border-jira-border rounded-lg p-6 mb-8">
@@ -7321,6 +7635,13 @@ const articles = {
         <p className="text-jira-textSecondary leading-relaxed mb-6">
           If you're planning a telemedicine platform, estimating cost correctly from the beginning is essential. Using structured inputs helps you avoid under-budgeting and costly redesigns later.
         </p>
+        <p className="text-jira-textSecondary leading-relaxed mb-6">
+          Telemedicine platforms are a specialized subset of healthcare software, with added complexity around real-time communication and patient workflows. For a broader view of how security, compliance, and quality assurance influence pricing across medical products, see our guide to{' '}
+          <Link href="/blog/healthcare-software-development-cost" className="text-jira-blue font-medium hover:underline">
+            healthcare software development cost
+          </Link>
+          .
+        </p>
 
         <div className="bg-jira-background border border-jira-border rounded-lg p-6 mb-8">
           <p className="text-jira-textSecondary leading-relaxed mb-2">
@@ -7488,7 +7809,127 @@ const articles = {
         "telemedicine software cost"
       ]
     }
-  }
+  },
+  'no-code-tools-saas-development-cost': {
+    title:
+      'How No-Code Tools Like Base44 Affect SaaS Development Cost (What You Save — and What You Don’t)',
+    date: '19/01/2026',
+    metaTitle:
+      'How No-Code Tools Like Base44 Affect SaaS Development Cost (What You Save — and What You Don’t)',
+    metaDescription:
+      'Learn how no-code tools like Base44 affect SaaS development cost. See where you save money, hidden tradeoffs, and how to estimate no-code vs custom.',
+    content: <NoCodeToolsSaasArticleContent />,
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Do no-code tools really reduce SaaS development cost?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. No-code tools can reduce SaaS development cost for MVP validation, internal tools, and workflow-based products by accelerating UI and common data workflows.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'When does no-code become more expensive than custom development?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No-code can become more expensive when products require complex permissions, performance scaling, deep billing logic, or integrations that demand workarounds and rebuilds.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is no-code good for building SaaS MVPs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Often yes. No-code can be effective for launching and validating an MVP quickly if the scope is intentionally simplified and platform limits are validated early.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the best strategy: no-code, custom, or hybrid?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Hybrid is often the most cost-efficient strategy: use no-code for non-core components and custom development for critical infrastructure like billing, permissions, and scalability.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How should I estimate costs for a no-code SaaS project?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Estimate three scenarios: a full custom build, a reduced-scope MVP using no-code, and a hybrid plan. Comparing scenarios side by side helps prevent under-budgeting.',
+          },
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://projecto-calculator.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Blog',
+          item: 'https://projecto-calculator.com/blog',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'No-Code vs Custom SaaS Cost',
+          item: 'https://projecto-calculator.com/blog/no-code-tools-saas-development-cost',
+        },
+      ],
+    },
+    blogPostingSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      '@id': 'https://projecto-calculator.com/blog/no-code-tools-saas-development-cost#blogposting',
+      headline:
+        'How No-Code Tools Like Base44 Affect SaaS Development Cost (What You Save — and What You Don’t)',
+      description:
+        'A detailed guide explaining how no-code tools like Base44 affect SaaS development cost, where they reduce budget, hidden tradeoffs, and how to estimate no-code vs custom vs hybrid approaches.',
+      image: 'https://projecto-calculator.com/images/blog/no-code-tools-saas-development-cost-cover.png',
+      author: {
+        '@type': 'Organization',
+        name: 'Projecto',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Projecto',
+        url: 'https://projecto-calculator.com/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://projecto-calculator.com/logo.png',
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://projecto-calculator.com/blog/no-code-tools-saas-development-cost',
+      },
+      datePublished: '2026-01-19',
+      dateModified: '2026-01-19',
+      inLanguage: 'en',
+      articleSection: 'SaaS Development Cost',
+      keywords: [
+        'no-code SaaS development cost',
+        'Base44',
+        'no-code vs custom development',
+        'SaaS MVP cost',
+        'low-code SaaS cost',
+        'hybrid SaaS development',
+        'software project cost estimation',
+      ],
+    },
+  },
 };
 
 export default function BlogArticlePage({ params }: { params: { slug: string } }) {
